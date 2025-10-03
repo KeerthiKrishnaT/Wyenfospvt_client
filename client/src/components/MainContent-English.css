@@ -1,0 +1,126 @@
+/* English Language Specific Styles for MainContent */
+
+/* Hide scrollbars for English language content */
+html[lang="en"] *,
+body[lang="en"] * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html[lang="en"] *::-webkit-scrollbar,
+body[lang="en"] *::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+/* Target the headline1 (heading-line-1) when English is selected */
+html[lang="en"] .marketing-heading .heading-line-1,
+body[lang="en"] .marketing-heading .heading-line-1 {
+  font-size: 45px !important; /* Reduced from 60px to 45px for English */
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: #000000 !important;
+  white-space: nowrap !important;
+  margin: 0 0 5px 0 !important;
+}
+
+/* English Language - Hero Content Wrapper */
+html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+  font-size: 45px !important; /* Reduced from 70px to 45px for English */
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: #000000 !important;
+  white-space: nowrap !important;
+  margin: 0 0 5px 0 !important;
+}
+
+/* English Language - Maximum Specificity Override */
+html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+  font-size: 45px !important; /* Reduced from 70px to 45px for English */
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: #000000 !important;
+  white-space: nowrap !important;
+  margin: 0 0 5px 0 !important;
+  display: block !important;
+}
+
+/* Mobile responsive adjustments for English */
+@media (max-width: 768px) {
+  html[lang="en"] .marketing-heading .heading-line-1,
+  body[lang="en"] .marketing-heading .heading-line-1,
+  html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+  body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+    font-size: 35px !important; /* Smaller on mobile */
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html[lang="en"] .marketing-heading .heading-line-1,
+  body[lang="en"] .marketing-heading .heading-line-1,
+  html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+  body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+    font-size: 28px !important; /* Even smaller on very small screens */
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+}
+
+/* Tablet specific adjustments for English */
+@media (min-width: 481px) and (max-width: 768px) {
+  html[lang="en"] .marketing-heading .heading-line-1,
+  body[lang="en"] .marketing-heading .heading-line-1,
+  html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+  body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+    font-size: 38px !important; /* Medium size for tablets */
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+}
+
+/* Large tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html[lang="en"] .marketing-heading .heading-line-1,
+  body[lang="en"] .marketing-heading .heading-line-1,
+  html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+  body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+    font-size: 42px !important; /* Slightly larger for larger screens */
+    white-space: nowrap !important;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1025px) {
+  html[lang="en"] .marketing-heading .heading-line-1,
+  body[lang="en"] .marketing-heading .heading-line-1,
+  html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+  body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+    font-size: 45px !important; /* Full size for desktop */
+    white-space: nowrap !important;
+  }
+}
+
+/* Dark mode support for English */
+@media (prefers-color-scheme: dark) {
+  html[lang="en"] .marketing-heading .heading-line-1,
+  body[lang="en"] .marketing-heading .heading-line-1,
+  html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+  body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  }
+}
+
+/* High contrast mode support for English */
+@media (prefers-contrast: high) {
+  html[lang="en"] .marketing-heading .heading-line-1,
+  body[lang="en"] .marketing-heading .heading-line-1,
+  html[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1,
+  body[lang="en"] .hero-content-wrapper .marketing-text-overlay .marketing-heading .heading-line-1 {
+    font-weight: 800 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  }
+}

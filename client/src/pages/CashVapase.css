@@ -1,0 +1,3542 @@
+/* Cash Vapase Page Styles */
+.cash-vapase-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Hero Section */
+.cash-hero {
+  background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 50%, #CDDC39 100%);
+  color: white;
+  padding: 40px 20px 80px 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.cash-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.cash-hero .container-fluid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Hero Content Layout */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto -30px auto;
+  padding-top: 10px;
+}
+
+.hero-left {
+  text-align: left;
+  animation: slideInFromTop 1.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-top: 0;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: slideInFromBottom 1.5s ease-out;
+  padding-top: 20px;
+}
+
+.cash-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 40px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #FF4444;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.cash-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.95;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* GST Notice Container */
+.gst-notice-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+/* GST Notice Styles */
+.gst-notice {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px solid #f39c12;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.2);
+  animation: pulse-warning 2s infinite;
+  flex: 1;
+  max-width: 500px;
+}
+
+.notice-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  animation: bounce 2s infinite;
+}
+
+.notice-content h3 {
+  margin: 0 0 8px 0;
+  color: #d68910;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.notice-content p {
+  margin: 0 0 6px 0;
+  color: #8b4513;
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+.notice-content p:last-child {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+  .notice-content strong {
+    color: #a0522d;
+    font-weight: 700;
+  }
+
+@keyframes pulse-warning {
+  0% { box-shadow: 0 4px 15px rgba(243, 156, 18, 0.2); }
+  50% { box-shadow: 0 4px 25px rgba(243, 156, 18, 0.4); }
+  100% { box-shadow: 0 4px 15px rgba(243, 156, 18, 0.2); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+  60% { transform: translateY(-3px); }
+}
+
+/* Cash Vapase Logo Section */
+.cash-logo-section {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cash Vapase Image on Right Side in Notice Container */
+.gst-notice-container .cash-logo-section {
+  margin-top: 0;
+  flex-shrink: 0;
+  max-width: 300px;
+}
+
+.cash-vapase-logo {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: logoFloat 3s ease-in-out infinite;
+  min-width: 500px;
+}
+
+/* Cash Vapase Logo in Notice Container */
+.gst-notice-container .cash-vapase-logo {
+  max-width: 250px;
+  min-width: 200px;
+  height: auto;
+}
+
+.cash-vapase-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Logo floating animation */
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Main Content */
+.cash-main {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  width: 100%;
+  margin: 0;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 60px 0 20px;
+}
+
+/* Intro Section */
+.cash-intro-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 0.3s both;
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 30px 0;
+  line-height: 1.2;
+}
+
+.intro-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.intro-description p {
+  margin-bottom: 20px;
+}
+
+.intro-description strong {
+  color: #FF4444;
+  font-weight: 600;
+}
+
+.cash-intro-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cash-intro-img:hover {
+  transform: scale(1.02);
+}
+
+/* Features Section */
+.cash-features-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature-item {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(76, 175, 80, 0.2);
+}
+
+.feature-icon {
+  margin-bottom: 30px;
+}
+
+.feature-img {
+  max-width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Milestone Section */
+.cash-milestone-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 0.9s both;
+  background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.milestone-content {
+  text-align: center;
+}
+
+.milestone-arrow {
+  font-size: 4rem;
+  color: #FFEB3B;
+  margin-bottom: 30px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.milestone-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.milestone-text p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.milestone-text strong {
+  color: #FFEB3B;
+  font-weight: 700;
+}
+
+/* Outlets Section */
+.cash-outlets-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 1.2s both;
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.outlets-content,
+.customers-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.outlets-description,
+.customers-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 30px 0 40px 0;
+  text-align: justify;
+}
+
+.benefits-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 40px 0 30px 0;
+  color: #FFEB3B;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.benefit-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 10px 0;
+  border-left: 3px solid #FFEB3B;
+  padding-left: 20px;
+}
+
+/* Customers Section */
+.cash-customers-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 1.4s both;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.cash-customers-section .benefits-title {
+  color: #FFE082;
+}
+
+.cash-customers-section .benefit-item {
+  border-left: 3px solid #FFE082;
+}
+
+/* Process Steps Section */
+.cash-process-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 1.6s both;
+  background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.process-step {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.step-icon {
+  margin-bottom: 20px;
+}
+
+.step-img {
+  max-width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.step-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px 0 15px 0;
+  color: #FFEB3B;
+}
+
+.step-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Gallery Section */
+.cash-gallery-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 1.8s both;
+}
+
+/* Centered GIF */
+.gallery-gif-center {
+  text-align: center;
+  margin: 40px 0 60px 0;
+  animation: fadeInUp 1s ease-out 2s both;
+}
+
+.gallery-gif {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-gif:hover {
+  transform: scale(1.05);
+}
+
+/* India Map Section */
+.gallery-map-section {
+  text-align: center;
+  margin: 40px 0;
+  animation: fadeInUp 1s ease-out 2.2s both;
+}
+
+.gallery-map {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-map:hover {
+  transform: scale(1.02);
+}
+
+/* Legacy Gallery Grid (if needed) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.gallery-item {
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Franchise Section */
+.cash-franchise-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 2.4s both;
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: rgb(7, 7, 7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.franchise-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 30px 0 40px 0;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.franchise-areas {
+  background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px 0;
+}
+
+.franchise-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #607383;;
+}
+
+.franchise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.franchise-item {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 0;
+  border-left: 3px solid #4CAF50;
+  padding-left: 15px;
+}
+
+.franchise-benefits {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px 0 0 0;
+}
+
+.franchise-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.franchise-benefit {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 10px 0;
+  border-left: 3px solid #2196F3;
+  padding-left: 20px;
+}
+
+/* New Formula Section */
+.cash-formula-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 2.6s both;
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.formula-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.formula-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.title-main {
+  color: #333;
+}
+
+.title-highlight {
+  color: #4ECDC4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.formula-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cash-formula-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video Placeholder Styles */
+.video-placeholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.video-placeholder:hover {
+  border-color: #4CAF50;
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+}
+
+.placeholder-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+.placeholder-content h3 {
+  color: #495057;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.placeholder-content p {
+  color: #6c757d;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.placeholder-image {
+  margin-top: 15px;
+}
+
+.preview-image {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.preview-image:hover {
+  transform: scale(1.05);
+}
+
+/* Voucher Slideshow Section */
+.voucher-slideshow-section {
+  margin: 0 0 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  display: block;
+  visibility: visible;
+}
+
+.voucher-slideshow-section .section-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.voucher-slideshow-section .customers-intro {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 20px auto 60px auto;
+  max-width: 900px;
+}
+
+.slideshow-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.slideshow-container:hover {
+  transform: scale(1.01);
+}
+
+.voucher-slide-wrapper {
+  position: relative;
+  min-height: 500px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: block;
+  visibility: visible;
+  background: white;
+}
+
+/* Background Box Animation - comes from bottom */
+.voucher-slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  animation: slideInFromBottomFast 0.4s ease-out;
+  z-index: 1;
+}
+
+/* Title Animation - comes from top */
+.voucher-slide-title {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  animation: slideInFromTopFast 0.5s ease-out 0.1s both;
+}
+
+.voucher-slide-title h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Container */
+.voucher-slide-content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Increased description space from 1.5fr to 2fr */
+  gap: 50px; /* Increased gap for better spacing */
+  align-items: center;
+  padding: 20px 100px 40px 100px; /* Increased side padding further */
+  min-height: 350px;
+}
+
+/* Description Animation - comes from left */
+.voucher-slide-description {
+  animation: slideInFromLeftFast 0.6s ease-out 0.2s both;
+  padding-right: 20px;
+  padding-left: 30px; /* Added left padding to move description more to the right */
+}
+
+.voucher-slide-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin: 0;
+  text-align: justify;
+  font-weight: 400;
+}
+
+/* Image Animation - comes from right */
+.voucher-slide-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInFromRightFast 0.6s ease-out 0.3s both;
+}
+
+.voucher-img {
+  max-width: 100%;
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voucher-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Controls */
+.slideshow-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.slide-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-btn:hover {
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  color: #667eea;
+}
+
+.prev-btn {
+  left: 10px; /* Moved closer to edge to avoid content overlap */
+}
+
+.next-btn {
+  right: 10px; /* Moved closer to edge to avoid content overlap */
+}
+
+/* Slide Indicators */
+.slide-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 4;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #fff;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+
+/* Fast Animation Keyframes */
+@keyframes slideInFromTopFast {
+  from {
+    opacity: 0;
+    transform: translateY(-120px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInFromBottomFast {
+  from {
+    opacity: 0;
+    transform: translateY(150px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInFromLeftFast {
+  from {
+    opacity: 0;
+    transform: translateX(-150px) rotateY(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+  }
+}
+
+@keyframes slideInFromRightFast {
+  from {
+    opacity: 0;
+    transform: translateX(150px) rotateY(20deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg) scale(1);
+  }
+}
+
+/* Legacy Animation Keyframes for backward compatibility */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Detailed Vouchers Section - keeping for backward compatibility */
+.cash-detailed-vouchers-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 2.8s both;
+  background: white;
+  padding: 60px 0;
+}
+
+.customers-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #666;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.voucher-detail-section {
+  margin: 60px 0;
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.voucher-detail-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.voucher-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.voucher-detail-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voucher-detail-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.voucher-detail-img:hover {
+  transform: scale(1.02);
+}
+
+.voucher-detail-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+}
+
+.voucher-detail-text p {
+  margin: 0;
+}
+
+/* Outlet Section */
+.cash-outlet-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 3.2s both;
+  background: linear-gradient(135deg, #f0b864 0%, #faaa5a 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.outlet-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.outlet-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.outlet-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFEB3B;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.outlet-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.outlet-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outlet-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.outlet-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.outlet-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.outlet-voucher-text p {
+  margin: 0;
+}
+
+/* Franchise Section */
+.cash-franchise-vouchers-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 3.4s both;
+  background: linear-gradient(135deg, #f1568a 0%, #ee6da0 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.franchise-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.franchise-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.franchise-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFE0E6;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.franchise-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.franchise-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.franchise-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.franchise-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.franchise-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.franchise-voucher-text p {
+  margin: 0;
+}
+
+/* District Co-ordinator Section */
+.cash-district-coordinator-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 3.6s both;
+  background: linear-gradient(135deg, #99c5e9 0%, #72ade9 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.district-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.district-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.district-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #E3F2FD;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.district-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.district-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.district-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.district-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.district-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.district-voucher-text p {
+  margin: 0;
+}
+
+/* District GIF Section */
+.district-gif-section {
+  margin: 60px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.district-gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.district-gif {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 80px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.cash-zonal-coordinator-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 3.8s both;
+  background: linear-gradient(135deg, #d88ae5 0%, #c070e2 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.zonal-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.zonal-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.zonal-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #F3E5F5;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.zonal-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.zonal-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zonal-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.zonal-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.zonal-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.zonal-voucher-text p {
+  margin: 0;
+}
+
+/* State Co-ordinator Section */
+.cash-state-coordinator-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 4.0s both;
+  background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.state-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.state-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.state-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #E8F5E8;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.state-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.state-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.state-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.state-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.state-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.state-voucher-text p {
+  margin: 0;
+}
+
+/* State Co-ordinator Controller Section */
+.cash-state-controller-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 4.2s both;
+  background: linear-gradient(135deg, #f18a6b 0%, #cc6647 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.state-controller-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.state-controller-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.state-controller-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFEBE3;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.state-controller-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.state-controller-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.state-controller-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.state-controller-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.state-controller-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.state-controller-voucher-text p {
+  margin: 0;
+}
+
+/* State Co-ordinator Controller North Section */
+.cash-state-controller-north-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 4.4s both;
+  background: linear-gradient(135deg, #677d88 0%, #5b6d75 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.state-controller-north-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.state-controller-north-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.state-controller-north-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ECEFF1;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.state-controller-north-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.state-controller-north-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.state-controller-north-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.state-controller-north-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.state-controller-north-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.state-controller-north-voucher-text p {
+  margin: 0;
+}
+
+/* District Co-ordinator Controller Section */
+.cash-district-controller-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 4.6s both;
+  background: linear-gradient(135deg, #8D6E63 0%, #6D4C41 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.district-controller-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.district-controller-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.district-controller-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #EFEBE9;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.district-controller-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.district-controller-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.district-controller-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.district-controller-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.district-controller-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.district-controller-voucher-text p {
+  margin: 0;
+}
+
+/* District Controller GIF Section */
+.district-controller-gif-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 4.8s both;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.district-controller-gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.district-controller-gif {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Zonal Co-ordinator Controller Section */
+.cash-zonal-controller-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 5.0s both;
+  background: linear-gradient(135deg, #795548 0%, #5D4037 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.zonal-controller-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.zonal-controller-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.zonal-controller-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #EFEBE9;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.zonal-controller-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.zonal-controller-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zonal-controller-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.zonal-controller-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.zonal-controller-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.zonal-controller-voucher-text p {
+  margin: 0;
+}
+
+/* Regional Head South Section */
+.cash-regional-head-south-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 5.4s both;
+  background: linear-gradient(135deg, #f79c58 0%, #f58245 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.regional-head-south-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.regional-head-south-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.regional-head-south-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFF3E0;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.regional-head-south-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.regional-head-south-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regional-head-south-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.regional-head-south-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.regional-head-south-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.regional-head-south-voucher-text p {
+  margin: 0;
+}
+
+/* Regional Head North Section */
+.cash-regional-head-north-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 5.6s both;
+  background: linear-gradient(135deg, #8494f0 0%, #6a7bec 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.regional-head-north-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+}
+
+.regional-head-north-voucher-section {
+  margin: 60px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.regional-head-north-voucher-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #E8EAF6;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.regional-head-north-voucher-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.regional-head-north-voucher-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regional-head-north-voucher-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.regional-head-north-voucher-img:hover {
+  transform: scale(1.02);
+}
+
+.regional-head-north-voucher-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.regional-head-north-voucher-text p {
+  margin: 0;
+}
+
+/* All Vouchers Gallery Section */
+.cash-all-vouchers-gallery-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 6.0s both;
+  background: linear-gradient(135deg, #8195eb 0%, #7c6396 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.vouchers-gallery-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  max-width: 900px;
+  color: #f0f0f0;
+}
+
+.vouchers-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.voucher-gallery-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.voucher-gallery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.voucher-gallery-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.voucher-gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.voucher-gallery-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+
+/* Coming Soon Section */
+.cash-coming-soon-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 6.4s both;
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 50%, #45B7D1 100%);
+  border-radius: 20px;
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cash-coming-soon-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.cash-coming-soon-section .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+.coming-soon-subtitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 30px 0 50px 0;
+  line-height: 1.3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon-tag {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD93D;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.coming-soon-gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.coming-soon-gif {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.coming-soon-gif:hover {
+  transform: scale(1.05);
+}
+
+/* FAQ Section */
+.cash-faq-section {
+  margin: 0 0 80px 0;
+  animation: fadeInUp 1s ease-out 6.6s both;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 25px 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question.active {
+  background-color: #f0f9f0;
+  color: #4CAF50;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 30px 25px 30px;
+  color: #666;
+  line-height: 1.7;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Coming Soon Section */
+.cash-coming-soon {
+  margin: 0;
+  animation: fadeInUp 1s ease-out 1.8s both;
+  text-align: center;
+  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  border-radius: 20px;
+  padding: 80px 40px;
+  color: white;
+}
+
+.coming-soon-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.question-mark {
+  margin-bottom: 40px;
+}
+
+.coming-soon-img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.coming-soon-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+  
+  .cash-main {
+    padding: 60px 15px;
+  }
+
+  .cash-hero {
+    padding: 40px 15px 60px 15px;
+    min-height: 75vh;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-left {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .cash-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 20px 0 15px 0;
+    white-space: nowrap;
+  }
+  
+  .cash-subtitle {
+    font-size: 1.3rem;
+    margin: 0 0 30px 0;
+  }
+
+  /* GST Notice Container responsive */
+  .gst-notice-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .gst-notice {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .notice-icon {
+    font-size: 1.5rem;
+  }
+  
+  .notice-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .notice-content p {
+    font-size: 0.9rem;
+  }
+  
+  .gst-notice-container .cash-logo-section {
+    max-width: 100%;
+    justify-content: center;
+  }
+  
+  .gst-notice-container .cash-vapase-logo {
+    max-width: 200px;
+    min-width: 150px;
+  }
+  
+  .cash-vapase-logo {
+    max-width: 500px;
+    min-width: 350px;
+  }
+
+  .cash-intro-section {
+    padding: 40px 20px;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .gallery-gif {
+    max-width: 350px;
+  }
+
+  .gallery-map {
+    max-width: 500px;
+  }
+
+  .gallery-gif-center {
+    margin: 30px 0 40px 0;
+  }
+
+  .gallery-map-section {
+    margin: 30px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cash-outlets-section,
+  .cash-customers-section,
+  .cash-process-section,
+  .cash-franchise-section,
+  .cash-formula-section,
+  .cash-detailed-vouchers-section,
+  .cash-outlet-section,
+  .cash-franchise-vouchers-section,
+  .cash-district-coordinator-section,
+  .cash-zonal-coordinator-section,
+  .cash-state-coordinator-section,
+  .cash-state-controller-section,
+  .cash-state-controller-north-section,
+  .cash-district-controller-section {
+    padding: 40px 20px;
+  }
+
+  .outlet-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .outlet-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .outlet-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .outlet-voucher-img {
+    max-width: 350px;
+  }
+
+  .outlet-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .franchise-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .franchise-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .franchise-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .franchise-voucher-img {
+    max-width: 350px;
+  }
+
+  .franchise-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .district-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .district-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .district-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .district-voucher-img {
+    max-width: 350px;
+  }
+
+  .district-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .district-gif {
+    max-width: 400px;
+  }
+
+  .district-gif-section {
+    margin: 40px 0 0 0;
+    padding: 30px 20px;
+  }
+
+  .zonal-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .zonal-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .zonal-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .zonal-voucher-img {
+    max-width: 350px;
+  }
+
+  .zonal-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .state-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .state-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .state-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .state-voucher-img {
+    max-width: 350px;
+  }
+
+  .state-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .state-controller-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .state-controller-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .state-controller-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .state-controller-voucher-img {
+    max-width: 350px;
+  }
+
+  .state-controller-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .state-controller-north-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .state-controller-north-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .state-controller-north-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .state-controller-north-voucher-img {
+    max-width: 350px;
+  }
+
+  .state-controller-north-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .district-controller-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .district-controller-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .district-controller-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .district-controller-voucher-img {
+    max-width: 350px;
+  }
+
+  .district-controller-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .district-controller-gif-section {
+    padding: 40px 20px;
+  }
+
+  .district-controller-gif-container {
+    padding: 30px 20px;
+  }
+
+  .district-controller-gif {
+    max-width: 400px;
+  }
+
+  .cash-zonal-controller-section {
+    padding: 40px 20px;
+  }
+
+  .zonal-controller-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .zonal-controller-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .zonal-controller-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .zonal-controller-voucher-img {
+    max-width: 350px;
+  }
+
+  .zonal-controller-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .cash-regional-head-south-section {
+    padding: 40px 20px;
+  }
+
+  .regional-head-south-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .regional-head-south-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .regional-head-south-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .regional-head-south-voucher-img {
+    max-width: 350px;
+  }
+
+  .regional-head-south-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .cash-regional-head-north-section {
+    padding: 40px 20px;
+  }
+
+  .regional-head-north-voucher-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .regional-head-north-voucher-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .regional-head-north-voucher-title {
+    font-size: 1.7rem;
+  }
+
+  .regional-head-north-voucher-img {
+    max-width: 350px;
+  }
+
+  .regional-head-north-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .cash-all-vouchers-gallery-section {
+    padding: 40px 20px;
+  }
+
+  .vouchers-gallery-intro {
+    font-size: 1.1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .vouchers-gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .voucher-gallery-item {
+    padding: 20px;
+  }
+
+  .voucher-gallery-img {
+    max-width: 220px;
+  }
+
+  .voucher-gallery-title {
+    font-size: 1rem;
+  }
+
+  .voucher-slideshow-section {
+    padding: 60px 20px;
+  }
+
+  .slideshow-container {
+    padding: 0 15px;
+  }
+
+  .voucher-slide-wrapper {
+    min-height: 600px;
+  }
+
+  .voucher-slide-title {
+    animation: slideInFromTopFast 0.4s ease-out 0.1s both;
+  }
+
+  .voucher-slide-title h3 {
+    font-size: 2rem;
+  }
+
+  .voucher-slide-description {
+    animation: slideInFromLeftFast 0.5s ease-out 0.15s both;
+  }
+
+  .voucher-slide-image {
+    animation: slideInFromRightFast 0.5s ease-out 0.2s both;
+  }
+
+  .voucher-slide-background {
+    animation: slideInFromBottomFast 0.3s ease-out;
+  }
+
+  .voucher-slide-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px 30px 40px 30px;
+    text-align: center;
+  }
+
+  .voucher-slide-description {
+    order: 2;
+    padding-right: 0;
+  }
+
+  .voucher-slide-image {
+    order: 1;
+  }
+
+  .voucher-img {
+    width: 300px;
+  }
+
+  .slide-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .cash-coming-soon-section {
+    padding: 60px 20px;
+  }
+
+  .coming-soon-subtitle {
+    font-size: 2rem;
+    margin: 25px 0 40px 0;
+  }
+
+  .coming-soon-tag {
+    font-size: 1.7rem;
+  }
+
+  .coming-soon-gif {
+    max-width: 500px;
+  }
+
+  .coming-soon-gif-container {
+    margin-top: 30px;
+  }
+
+  .voucher-detail-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .voucher-detail-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .voucher-detail-title {
+    font-size: 1.7rem;
+  }
+
+  .voucher-detail-img {
+    max-width: 350px;
+  }
+
+  .customers-intro {
+    font-size: 1rem;
+    margin: 20px auto 40px auto;
+  }
+
+  .franchise-areas,
+  .franchise-benefits {
+    padding: 20px;
+  }
+
+  .franchise-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .franchise-benefit {
+    font-size: 0.95rem;
+    padding-left: 15px;
+  }
+
+  .formula-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .formula-title {
+    font-size: 2.5rem;
+  }
+
+  .video-container {
+    max-width: 400px;
+  }
+
+  .outlets-description,
+  .customers-description {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .benefits-title {
+    font-size: 1.5rem;
+  }
+
+  .benefit-item {
+    font-size: 0.95rem;
+    padding-left: 15px;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .step-img {
+    max-width: 60px;
+    height: 60px;
+  }
+
+  .step-title {
+    font-size: 1.2rem;
+  }
+
+  .milestone-text p {
+    font-size: 1.1rem;
+  }
+
+  .coming-soon-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding: 0 10px;
+  }
+  
+  .cash-main {
+    padding: 40px 10px;
+  }
+
+  .cash-hero {
+    padding: 30px 10px 50px 10px;
+    min-height: 65vh;
+  }
+
+  .hero-content {
+    gap: 30px;
+  }
+  
+  .cash-title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin: 15px 0 10px 0;
+    white-space: nowrap;
+  }
+  
+  .cash-subtitle {
+    font-size: 1.1rem;
+    margin: 0 0 20px 0;
+  }
+  
+  .cash-vapase-logo {
+    max-width: 400px;
+    min-width: 280px;
+  }
+  
+  /* GST Notice Container for small mobile */
+  .gst-notice-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  
+  .gst-notice {
+    padding: 12px;
+    margin-top: 0;
+  }
+  
+  .gst-notice-container .cash-logo-section {
+    max-width: 100%;
+    justify-content: center;
+  }
+  
+  .gst-notice-container .cash-vapase-logo {
+    max-width: 180px;
+    min-width: 120px;
+  }
+  
+  .cash-intro-section {
+    padding: 30px 15px;
+  }
+  
+  .intro-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .feature-item {
+    padding: 30px 20px;
+  }
+  
+  .milestone-arrow {
+    font-size: 3rem;
+  }
+  
+  .milestone-text p {
+    font-size: 1rem;
+  }
+  
+  .coming-soon-title {
+    font-size: 2rem;
+  }
+  
+  .coming-soon-text {
+    font-size: 1rem;
+  }
+  
+  .faq-question {
+    padding: 20px;
+    font-size: 1rem;
+  }
+  
+  .faq-answer {
+    padding: 0 20px 20px 20px;
+  }
+
+  .gallery-gif {
+    max-width: 300px;
+  }
+
+  .gallery-map {
+    max-width: 350px;
+  }
+
+  .gallery-gif-center {
+    margin: 20px 0 30px 0;
+  }
+
+  .gallery-map-section {
+    margin: 20px 0;
+  }
+
+  .cash-franchise-section,
+  .cash-formula-section,
+  .cash-detailed-vouchers-section,
+  .cash-outlet-section,
+  .cash-franchise-vouchers-section,
+  .cash-district-coordinator-section,
+  .cash-zonal-coordinator-section,
+  .cash-state-coordinator-section,
+  .cash-state-controller-section,
+  .cash-state-controller-north-section,
+  .cash-district-controller-section {
+    padding: 30px 15px;
+  }
+
+  .outlet-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .outlet-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .outlet-voucher-img {
+    max-width: 300px;
+  }
+
+  .outlet-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .outlet-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .franchise-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .franchise-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .franchise-voucher-img {
+    max-width: 300px;
+  }
+
+  .franchise-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .franchise-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .district-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .district-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .district-voucher-img {
+    max-width: 300px;
+  }
+
+  .district-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .district-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .district-gif {
+    max-width: 300px;
+  }
+
+  .district-gif-section {
+    margin: 30px 0 0 0;
+    padding: 20px 15px;
+  }
+
+  .zonal-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .zonal-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .zonal-voucher-img {
+    max-width: 300px;
+  }
+
+  .zonal-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .zonal-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .state-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .state-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .state-voucher-img {
+    max-width: 300px;
+  }
+
+  .state-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .state-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .state-controller-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .state-controller-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .state-controller-voucher-img {
+    max-width: 300px;
+  }
+
+  .state-controller-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .state-controller-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .state-controller-north-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .state-controller-north-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .state-controller-north-voucher-img {
+    max-width: 300px;
+  }
+
+  .state-controller-north-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .state-controller-north-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .district-controller-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .district-controller-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .district-controller-voucher-img {
+    max-width: 300px;
+  }
+
+  .district-controller-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .district-controller-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .district-controller-gif-section {
+    padding: 30px 15px;
+  }
+
+  .district-controller-gif-container {
+    padding: 20px 15px;
+  }
+
+  .district-controller-gif {
+    max-width: 300px;
+  }
+
+  .cash-zonal-controller-section {
+    padding: 30px 15px;
+  }
+
+  .zonal-controller-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .zonal-controller-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .zonal-controller-voucher-img {
+    max-width: 300px;
+  }
+
+  .zonal-controller-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .zonal-controller-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .cash-regional-head-south-section {
+    padding: 30px 15px;
+  }
+
+  .regional-head-south-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .regional-head-south-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .regional-head-south-voucher-img {
+    max-width: 300px;
+  }
+
+  .regional-head-south-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .regional-head-south-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .cash-regional-head-north-section {
+    padding: 30px 15px;
+  }
+
+  .regional-head-north-voucher-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .regional-head-north-voucher-title {
+    font-size: 1.5rem;
+  }
+
+  .regional-head-north-voucher-img {
+    max-width: 300px;
+  }
+
+  .regional-head-north-voucher-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .regional-head-north-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .cash-all-vouchers-gallery-section {
+    padding: 30px 15px;
+  }
+
+  .vouchers-gallery-intro {
+    font-size: 1rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .vouchers-gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .voucher-gallery-item {
+    padding: 15px;
+  }
+
+  .voucher-gallery-img {
+    max-width: 180px;
+    margin-bottom: 15px;
+  }
+
+  .voucher-gallery-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+
+  .voucher-slideshow-section {
+    padding: 40px 15px;
+  }
+
+  .slideshow-container {
+    padding: 0 10px;
+  }
+
+  .voucher-slide-wrapper {
+    min-height: 550px;
+  }
+
+  .voucher-slide-title {
+    padding: 20px 15px 15px 15px;
+  }
+
+  .voucher-slide-title {
+    animation: slideInFromTopFast 0.3s ease-out 0.1s both;
+  }
+
+  .voucher-slide-title h3 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .voucher-slide-description {
+    animation: slideInFromLeftFast 0.4s ease-out 0.15s both;
+  }
+
+  .voucher-slide-image {
+    animation: slideInFromRightFast 0.4s ease-out 0.2s both;
+  }
+
+  .voucher-slide-background {
+    animation: slideInFromBottomFast 0.25s ease-out;
+  }
+
+  .voucher-slide-content {
+    padding: 15px 20px 30px 20px;
+  }
+
+  .voucher-slide-description p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .voucher-img {
+    width: 250px;
+  }
+
+  .slide-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  .slide-indicators {
+    bottom: 15px;
+    gap: 8px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .cash-coming-soon-section {
+    padding: 40px 15px;
+  }
+
+  .coming-soon-subtitle {
+    font-size: 1.6rem;
+    margin: 20px 0 30px 0;
+  }
+
+  .coming-soon-tag {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+
+  .coming-soon-gif {
+    max-width: 350px;
+    border-radius: 10px;
+  }
+
+  .coming-soon-gif-container {
+    margin-top: 25px;
+  }
+
+  .voucher-detail-section {
+    margin: 30px 0;
+    padding: 20px 15px;
+  }
+
+  .voucher-detail-title {
+    font-size: 1.5rem;
+  }
+
+  .voucher-detail-img {
+    max-width: 300px;
+  }
+
+  .voucher-detail-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .customers-intro {
+    font-size: 0.95rem;
+    margin: 15px auto 30px auto;
+  }
+
+  .franchise-areas,
+  .franchise-benefits {
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .franchise-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .franchise-description {
+    font-size: 1rem;
+  }
+
+  .formula-title {
+    font-size: 2rem;
+  }
+
+  .video-container {
+    max-width: 300px;
+  }
+}
+
+/* Font Size Adjustments for 100% Zoom - Cash Vapase Page */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  /* Hero Section */
+  .cash-title {
+    font-size: 3.5rem !important;
+  }
+  
+  .cash-subtitle {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .customers-intro {
+    font-size: 0.95rem !important;
+  }
+  
+  /* Voucher Slideshow */
+  .voucher-slide-title h3 {
+    font-size: 2rem !important;
+  }
+  
+  .voucher-slide-description p {
+    font-size: 1rem !important;
+  }
+  
+  /* Voucher Gallery */
+  .voucher-gallery-title {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Regional Head Sections */
+  .regional-head-north-voucher-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .regional-head-north-voucher-text {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Coming Soon Section */
+  .coming-soon-subtitle {
+    font-size: 1.4rem !important;
+  }
+  
+  /* FAQ Section */
+  .faq-question {
+    font-size: 1rem !important;
+  }
+  
+  .faq-answer {
+    font-size: 0.9rem !important;
+  }
+}

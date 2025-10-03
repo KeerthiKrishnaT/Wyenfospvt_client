@@ -1,0 +1,378 @@
+.footer {
+  margin-top: auto;
+  width: 100%; 
+}
+
+.footer-container {
+  width: 100%;
+  margin: 0;
+  padding: 40px 20px 20px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Content - Three Column Layout */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* Footer Section Styles */
+.footer-section {
+  padding: 0 15px;
+}
+
+/* Left Column - WYENFOS Branding */
+.footer-branding {
+  text-align: left;
+}
+
+.footer-logo {
+  margin-bottom: 15px;
+}
+
+.wyenfos-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  font-family: "Roboto", Sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.company-tagline {
+  font-family: "Roboto", Sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.4;
+  margin: 15px 0 20px 0;
+  text-align: left;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.social-icon i {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.social-icon:hover {
+  background: #333333;
+  transform: scale(1.1);
+}
+
+.social-icon.facebook {
+  font-family: Arial, sans-serif;
+}
+
+.social-icon.instagram {
+  border-radius: 8px;
+}
+
+.social-icon.youtube {
+  border-radius: 4px;
+}
+
+/* Middle Column - Quick Links */
+.footer-links {
+  text-align: left;
+}
+
+.footer-heading {
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-links-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.footer-links-list li a {
+  color: #666666;
+  text-decoration: none;
+  font-family: "Roboto", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.footer-links-list li a:hover {
+  color: #000000;
+}
+
+/* Right Column - Get in Touch */
+.footer-contact {
+  text-align: left;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  font-family: "Roboto", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.contact-item strong {
+  color: #333333;
+  font-weight: 600;
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 20px;
+}
+
+.google-map {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.google-map iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.map-pin {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.map-overlay p {
+  font-family: "Roboto", Sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.view-map-btn {
+  background: #4285f4;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: "Roboto", Sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.view-map-btn:hover {
+  background: #3367d6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Branch Selector */
+.branch-selector {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.branch-label {
+  display: block;
+  font-family: "Roboto", Sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.branch-dropdown {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  font-family: "Roboto", Sans-serif;
+  font-size: 14px;
+  color: #333333;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.branch-dropdown:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.branch-dropdown:hover {
+  border-color: #bdc3c7;
+}
+
+.branch-name {
+  color: #3498db !important;
+  font-size: 15px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Footer Bottom - Copyright */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.copyright-text {
+  font-family: "Roboto", Sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-section {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .company-tagline {
+    text-align: center;
+  }
+  
+  .social-media-icons {
+    justify-content: center;
+  }
+  
+  .footer-heading {
+    text-align: center;
+  }
+  
+  .footer-links-list {
+    text-align: center;
+  }
+  
+  .footer-links-list li {
+    padding-left: 0;
+  }
+  
+  .footer-links-list li::before {
+    display: none;
+  }
+  
+  .contact-info {
+    text-align: center;
+  }
+  
+  .branch-selector {
+    margin-bottom: 20px;
+    padding: 12px;
+  }
+  
+  .branch-dropdown {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0;
+  }
+  
+  .footer-container {
+    padding: 30px 15px 15px 15px;
+  }
+  
+  .footer-content {
+    gap: 25px;
+  }
+  
+  .wyenfos-logo {
+    max-width: 150px;
+  }
+  
+  .footer-heading {
+    font-size: 16px;
+  }
+  
+  .footer-links-list li a,
+  .contact-item {
+    font-size: 13px;
+  }
+}

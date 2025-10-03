@@ -1,0 +1,607 @@
+/* About Page Styles */
+.about-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.about-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+  position: relative;
+}
+
+.about-title::before,
+.about-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: white;
+}
+
+.about-title::before {
+  top: -20px;
+}
+
+.about-title::after {
+  bottom: -20px;
+}
+
+/* Who We Are Section */
+.who-we-are-section {
+  padding: 80px 20px;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.who-we-are-box {
+  background: white;
+  border-radius: 25px;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 20px;
+  max-width: 100%;
+  width: calc(100% - 40px);
+}
+
+.who-we-are-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  min-height: 500px;
+}
+
+.who-we-are-text {
+  padding: 60px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.about-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.who-we-are-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.group-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.group-image:hover {
+  transform: scale(1.05);
+}
+
+/* Slide Animations */
+.slide-from-top {
+  animation: slideFromTop 1s ease-out;
+}
+
+.slide-from-bottom {
+  animation: slideFromBottom 1s ease-out;
+}
+
+@keyframes slideFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Affordable Living Section */
+.affordable-living-section {
+  padding: 60px 20px;
+  background: transparent;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.affordable-living-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 100%;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.affordable-living-icon {
+  font-size: 3rem;
+  color: #2872fa;
+  animation: bounce 2s infinite;
+}
+
+.affordable-living-text h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* About Contact Section */
+.about-contact-section {
+  padding: 60px 20px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.about-contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 40px;
+  background: #ffffff;
+  border-radius: 15px;
+  color: #333;
+  transition: transform 0.3s ease;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.about-contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-contact-icon-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.about-contact-details {
+  text-align: left;
+}
+
+.about-contact-details h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.about-contact-details p {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* About Certifications Section Styles */
+.about-certifications-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.about-certifications-box {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333333;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.about-certification-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.about-certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}
+
+.about-certification-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-certification-item:hover .about-certification-logo {
+  transform: scale(1.05);
+}
+
+.about-oro-logo {
+  padding: 15px !important;
+  filter: brightness(1.2) contrast(1.1);
+}
+
+.about-oro-logo:hover {
+  filter: brightness(1.4) contrast(1.2);
+}
+
+/* Container */
+.container-fluid {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 30px;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 10px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 0 10px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .who-we-are-section,
+  .affordable-living-section,
+  .about-contact-section {
+    padding: 60px 10px;
+    overflow-x: hidden;
+  }
+  
+  .who-we-are-box {
+    margin: 0 5px;
+    width: calc(100% - 10px);
+  }
+  
+  .affordable-living-content {
+    margin: 0 5px;
+    width: calc(100% - 10px);
+  }
+
+  .about-hero {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .about-title::before,
+  .about-title::after {
+    width: 60px;
+  }
+  
+  .who-we-are-content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .who-we-are-text {
+    padding: 40px 30px;
+  }
+  
+  .who-we-are-image {
+    height: 300px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .affordable-living-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .affordable-living-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .about-certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .about-certification-logo {
+    max-height: 100px;
+  }
+  
+  .about-contact-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 25px 30px;
+  }
+  
+  .about-contact-details {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding: 0 5px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 0 5px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .who-we-are-section,
+  .affordable-living-section,
+  .about-contact-section {
+    padding: 40px 5px;
+    overflow-x: hidden;
+  }
+  
+  .who-we-are-box {
+    margin: 0 2px;
+    width: calc(100% - 4px);
+  }
+  
+  .affordable-living-content {
+    margin: 0 2px;
+    width: calc(100% - 4px);
+  }
+
+  .about-hero {
+    height: 100vh;
+    min-height: 400px;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .about-title::before,
+  .about-title::after {
+    width: 40px;
+  }
+  
+  .who-we-are-text {
+    padding: 30px 20px;
+  }
+  
+  .who-we-are-image {
+    height: 250px;
+  }
+  
+  .who-we-are-section,
+  .affordable-living-section,
+  .about-contact-section,
+  .about-certifications-section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-description p {
+    font-size: 1rem;
+  }
+  
+  .about-certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .about-certification-logo {
+    max-height: 80px;
+  }
+}
+
+/* Font Size Adjustments for 100% Zoom - About Page */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  /* Hero Section */
+  .about-hero-title {
+    font-size: 3rem !important;
+  }
+  
+  .about-hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  
+  /* Company Info */
+  .company-info-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .company-info-description {
+    font-size: 1rem !important;
+  }
+  
+  /* Key Features */
+  .feature-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .feature-description {
+    font-size: 0.95rem !important;
+  }
+  
+  /* Certifications */
+  .certification-title {
+    font-size: 1.4rem !important;
+  }
+}

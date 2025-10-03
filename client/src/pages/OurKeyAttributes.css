@@ -1,0 +1,281 @@
+/* Our Key Attributes Page Styles */
+
+.our-key-attributes-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Hero Section */
+.key-attributes-hero-section {
+  padding: 200px 0 160px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.key-attributes-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.key-attributes-hero-section .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Main Content Section */
+.key-attributes-main-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.attributes-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 60px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.attributes-content-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #2872fa, #1559ed, #2872fa);
+  z-index: 1;
+}
+
+.attributes-content {
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.attributes-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2872fa;
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mountain-image-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mountain-image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.mountain-image:hover {
+  transform: scale(1.02);
+}
+
+.crestm-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1559ed;
+  margin: 40px 0 30px 0;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.attributes-description {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.attributes-description p {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #495057;
+  margin: 0;
+}
+
+.attribute-letter {
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Bottom Image Section */
+.key-attributes-bottom-section {
+  padding: 80px 0 100px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.bottom-image-container {
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.bottom-illustration {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.bottom-illustration:hover {
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .attributes-content-wrapper {
+    margin: 0 20px;
+    padding: 40px;
+  }
+
+  .attributes-title {
+    font-size: 2.5rem;
+  }
+
+  .mountain-image {
+    max-width: 500px;
+  }
+
+  .crestm-title {
+    font-size: 2rem;
+    letter-spacing: 6px;
+  }
+
+  .attributes-description p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .bottom-illustration {
+    max-width: 800px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .key-attributes-hero-section {
+    padding: 100px 0 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    padding: 0 20px;
+  }
+
+  .key-attributes-main-section {
+    padding: 60px 0;
+  }
+
+  .attributes-content-wrapper {
+    margin: 0 15px;
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+
+  .attributes-title {
+    font-size: 2rem;
+    margin: 0 0 30px 0;
+  }
+
+  .mountain-image {
+    max-width: 350px;
+  }
+
+  .crestm-title {
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    margin: 30px 0 20px 0;
+  }
+
+  .attributes-description {
+    text-align: left;
+  }
+
+  .attributes-description p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .key-attributes-bottom-section {
+    padding: 60px 0 80px 0;
+  }
+
+  .bottom-illustration {
+    max-width: 100%;
+    margin: 0 15px;
+    border-radius: 10px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .attributes-title {
+    font-size: 1.8rem;
+  }
+
+  .mountain-image {
+    max-width: 300px;
+  }
+
+  .crestm-title {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+  }
+
+  .attributes-description p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .attribute-letter {
+    font-size: 1.1rem;
+  }
+}

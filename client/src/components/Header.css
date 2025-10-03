@@ -1,0 +1,2092 @@
+/* Header Styles - Matching Current Design */
+
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0;
+  z-index: 10000; /* Higher z-index to stay above festival animation */
+}
+
+/* Light pinkish-beige top border */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #f5e6d3;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 auto;
+  gap: 20px; /* Increased gap between elements to prevent overlap */
+  overflow: visible; /* Allow navigation items to be visible */
+  position: relative;
+  z-index: 10001; /* Ensure header container stays above all content */
+}
+
+/* Ensure proper spacing between logo and navigation */
+.header-container > * {
+  flex-shrink: 0;
+}
+
+.header-container .logo {
+  flex-shrink: 0;
+}
+
+.header-container .navigation {
+  flex-shrink: 1;
+  min-width: 0;
+  margin-right: 20px; /* Add margin to prevent overlap */
+}
+
+/* Logo Styles - Properly contained within header */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 250px;
+  min-width: 200px;
+  z-index: 10001; /* Ensure logo stays visible above all content */
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+.logo:hover .logo-icon {
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  flex-shrink: 0;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10002; /* Ensure logo icon stays visible */
+  position: relative;
+}
+
+.logo-image {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  z-index: 10002; /* Ensure logo text stays visible */
+  position: relative;
+}
+
+.company-name {
+  font-size: 16px !important; /* Increased from 14px with !important */
+  font-weight: bold;
+  color: #d32f2f;
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+.company-type {
+  font-size: 12px !important; /* Increased from 10px with !important */
+  color: #d32f2f;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+
+
+/* Admin Bar Styles */
+.admin-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  right: 80px; /* Move left to avoid mobile menu toggle */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+  min-width: 120px;
+}
+
+
+
+/* Navigation Styles - Right side */
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  flex: 1;
+  max-width: 900px; /* Increased to accommodate all navigation items */
+  position: relative;
+  z-index: 10003; /* Higher than festival animation (10000) */
+  overflow: visible; /* Ensure dropdowns are not cut off */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px; /* Further reduced gap to prevent overlap */
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow: visible; /* Ensure all items are visible */
+  margin-right: 250px; /* Further increased margin to move buttons more to the right */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px !important; /* Further reduced font size */
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 12px; /* Reduced padding */
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Reduced gap */
+  white-space: nowrap;
+  margin: 0;
+}
+
+.nav-link:hover {
+  color: #d32f2f;
+  background: #f8f9fa;
+}
+
+.nav-link.active {
+  color: #333;
+  font-weight: 600;
+}
+.nav-link.active:hover {
+  color: #d32f2f;
+  font-weight: 600;
+}
+.dropdown {
+  position: relative;
+  margin: 0;
+  z-index: 10004; /* Higher than festival animation (10000) */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.dropdown:hover .vertical-dropdown {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.dropdown-arrow {
+  font-size: 14px;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.dropdown:hover .dropdown-arrow,
+.dropdown-arrow.active {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu Styles */
+.dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown-toggle.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  z-index: 10005 !important; /* Higher than festival animation (10000) */
+  margin-top: 8px;
+  padding: 8px 0;
+  list-style: none;
+  animation: dropdownFadeIn 0.3s ease-out;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  min-height: 400px !important; /* Ensure enough height for all items */
+}
+
+/* Vertical Dropdown Styles */
+.vertical-dropdown {
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  z-index: 10005 !important;
+  padding: 0;
+  border-left: 4px solid #d32f2f;
+  margin-top: 8px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.dropdown-section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.dropdown-section:last-child .vertical-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.vertical-dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10006;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vertical-dropdown-item:hover {
+  background: #f8f9fa;
+  color: #1976d2;
+  transform: translateX(4px);
+}
+
+.milestone-section {
+  position: relative;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.milestone-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+  pointer-events: auto;
+  z-index: 10006;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.milestone-toggle-btn:hover {
+  background: #f8f9fa;
+  color: #1976d2;
+  transform: translateX(4px);
+}
+
+.header-milestone-arrow {
+  font-size: 6px;
+  transition: transform 0.3s ease;
+  color: #666 !important;
+  margin-bottom: 0 !important;
+  animation: none !important;
+}
+
+.header-milestone-arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.milestone-submenu {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 4px solid #d32f2f;
+  margin-top: 0;
+  background: #f8f9fa;
+}
+
+.milestone-item {
+  display: block;
+  padding: 10px 20px;
+  color: #1d1c1c;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10007;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.milestone-item:hover {
+  background: #e3f2fd;
+  color: #1976d2;
+  transform: translateX(4px);
+}
+
+.dropdown-item {
+  display: flex !important;
+  align-items: center;
+  padding: 14px 22px;
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e5e5 !important;
+  background: #ffffff !important;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  position: relative;
+  z-index: 10006 !important; /* Higher than festival animation (10000) */
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  min-height: 48px !important;
+  overflow: visible !important;
+  margin: 2px 0 !important;
+}
+
+
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+  color: #d32f2f;
+  transform: translateX(5px);
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.submenu-arrow {
+  font-size: 12px;
+  margin-right: 8px;
+  color: #666;
+  font-weight: bold;
+}
+
+.flag {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Milestone submenu styles */
+.milestone-item {
+  position: relative;
+}
+
+.milestone-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.header-milestone-arrow {
+  margin-left: auto;
+  font-size: 6px;
+  color: #666;
+  transition: transform 0.3s ease;
+  margin-bottom: 0 !important;
+  animation: none !important;
+}
+
+.header-milestone-arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  border-left: 2px solid #d32f2f;
+  margin-left: 15px;
+  animation: submenuSlideDown 0.3s ease-out;
+  z-index: 10007; /* Higher than festival animation (10000) */
+  position: relative;
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  position: relative;
+  z-index: 10008 !important; /* Higher than festival animation (10000) */
+}
+
+.submenu-item:hover {
+  background: #e9ecef;
+  color: #d32f2f;
+  transform: translateX(5px);
+}
+
+@keyframes submenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  border: 3px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(211, 47, 47, 0.8);
+  z-index: 10001;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure toggle button is hidden on desktop screens */
+@media (min-width: 1025px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+.mobile-menu-toggle:hover {
+  background: linear-gradient(135deg, #b71c1c, #d32f2f);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(211, 47, 47, 0.4);
+}
+
+.mobile-menu-toggle:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.mobile-menu-toggle span {
+  width: 22px;
+  height: 3px;
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0;
+  border-radius: 2px;
+  display: block;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Modern hamburger animation when menu is open */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: #ffffff;
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background: #ffffff;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  z-index: 100000 !important; /* Increased z-index to ensure it's above everything */
+  display: flex !important;
+  justify-content: flex-end !important;
+  animation: fadeIn 0.3s ease;
+  visibility: visible !important;
+  opacity: 1 !important;
+  contain: layout style;
+  will-change: transform;
+  pointer-events: auto !important;
+  /* Ensure mobile menu stays visible */
+  transform: translateX(0) !important;
+}
+
+.mobile-menu-content {
+  background: #ffffff !important;
+  width: 300px !important;
+  height: 100vh !important;
+  padding: 20px !important;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1) !important;
+  animation: slideInRight 0.3s ease;
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 100001 !important; /* Higher than overlay */
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  overflow-y: auto;
+  border-left: 3px solid #d32f2f; /* Add red border for better visibility */
+  contain: layout style;
+  will-change: transform;
+  pointer-events: auto !important;
+  transform: translateX(0) !important;
+}
+
+/* Mobile menu responsive adjustments */
+@media (max-width: 480px) {
+  .mobile-menu-content {
+    width: 280px !important;
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-menu-content {
+    width: 260px !important;
+    padding: 12px !important;
+  }
+}
+
+/* Ensure mobile menu is properly positioned on all devices */
+@media (max-width: 1024px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+    z-index: 10001 !important; /* Ensure it's always on top */
+  }
+  
+  .navigation {
+    display: none !important;
+  }
+  
+  .admin-bar {
+    display: none !important;
+  }
+}
+
+/* Show navigation on larger screens */
+@media (min-width: 1025px) {
+  .navigation {
+    display: flex !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+  
+  .nav-menu {
+    margin-right: 200px; /* Further increased spacing to move buttons more to the right on large screens */
+  }
+  
+  .admin-bar {
+    display: flex !important;
+    right: 40px;
+  }
+  
+  /* Google Translate button positioning for desktop */
+  .language-selector-nav {
+    right: 15px !important;
+  }
+}
+
+/* Show navigation on medium screens too */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navigation {
+    display: flex !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+  
+  .nav-menu {
+    margin-right: 310px; /* Further increased spacing to move buttons more to the right on medium screens */
+  }
+  
+  .admin-bar {
+    display: flex !important;
+    right: 30px;
+  }
+  
+  /* Google Translate button positioning for medium screens */
+  .language-selector-nav {
+    right: 20px !important;
+  }
+}
+
+/* Force mobile menu toggle visibility on all mobile devices */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+    z-index: 10001 !important;
+    position: fixed !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: linear-gradient(135deg, #d32f2f, #b71c1c) !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.5) !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+  
+  /* Ensure mobile menu overlay is always visible when open */
+  .mobile-menu-overlay {
+    display: flex !important;
+    z-index: 100000 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
+
+/* Additional mobile menu toggle visibility for all screen sizes */
+@media (max-width: 1024px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Remove top padding to eliminate gap between header and content */
+body {
+  padding-top: 0;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Fix ResizeObserver loop issues */
+.mobile-menu-overlay,
+.mobile-menu-content,
+.mobile-menu-toggle {
+  contain: layout style;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  border-radius: 8px;
+  color: white;
+}
+
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: none; /* Remove filter to show original logo colors */
+}
+
+.mobile-logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mobile-menu-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.mobile-nav {
+  flex: 1;
+}
+
+.mobile-nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.mobile-nav-menu li {
+  margin-bottom: 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.mobile-nav-menu li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 15px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.mobile-nav-link:hover {
+  background: #f8f9fa;
+  color: #d32f2f;
+  transform: translateX(5px);
+}
+
+/* Mobile Language Selector */
+.mobile-language-selector {
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  margin-top: 10px;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Show mobile language selector in mobile menu */
+.mobile-language-selector {
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  margin-top: 10px;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.mobile-language-selector #google_translate_element_mobile {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+}
+
+/* Hide desktop Google Translate widget on mobile screens since we'll use mobile menu */
+@media (max-width: 1024px) {
+  .language-selector-nav {
+    display: none !important;
+  }
+}
+
+/* Style Google Translate widget in mobile menu */
+.mobile-language-selector .goog-te-gadget-simple {
+  background: #f8f9fa !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 6px !important;
+  padding: 12px 20px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  width: 100% !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.mobile-language-selector .goog-te-gadget-simple:hover {
+  background: #e9ecef !important;
+  color: #d32f2f !important;
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  border-color: #d0d0d0 !important;
+}
+
+.mobile-language-selector .goog-te-gadget-simple .goog-te-menu-value {
+  color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  text-shadow: none !important;
+}
+
+.mobile-language-selector .goog-te-gadget-simple .goog-te-menu-value:after {
+  content: "▼" !important;
+  font-size: 10px !important;
+  margin-left: 4px !important;
+  color: #666666 !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+.mobile-language-selector .language-selector {
+  width: 100%;
+}
+
+.mobile-language-selector .custom-language-selector {
+  width: 100%;
+}
+
+.mobile-language-selector .language-button {
+  width: 100% !important;
+  justify-content: center !important;
+  padding: 12px 20px !important;
+  font-size: 14px !important;
+  background: #f8f9fa !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 6px !important;
+}
+
+.mobile-language-selector .language-button:hover {
+  background: #e9ecef !important;
+  color: #d32f2f !important;
+  transform: none !important;
+}
+
+.mobile-language-selector .language-dropdown {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  min-width: 200px !important;
+  max-width: 250px !important;
+}
+
+.mobile-menu-footer {
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Mobile Dropdown Menu Styles */
+.mobile-dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #f8f9fa;
+  border-left: 3px solid #d32f2f;
+  margin-left: 15px;
+  animation: mobileDropdownSlideDown 0.3s ease-out;
+}
+
+/* Mobile Milestone Button - Unique Class to Avoid Inheritance */
+.mobile-nav .mobile-dropdown-menu .mobile-milestone-button,
+.mobile-milestone-button {
+  display: block;
+  width: 100%;
+  padding: 12px 25px;
+  background: transparent;
+  border: none;
+  color: #992222 !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0;
+  border-bottom: 1px solid #e9ecef;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-sizing: border-box;
+}
+
+.mobile-nav .mobile-dropdown-menu .mobile-milestone-button:hover,
+.mobile-milestone-button:hover {
+  background: #e9ecef;
+  color: #d32f2f !important;
+  transform: translateX(5px);
+}
+
+.mobile-dropdown-menu li {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.mobile-dropdown-menu .mobile-nav-link {
+  padding: 12px 25px;
+  font-size: 14px;
+  color: #666;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.mobile-dropdown-menu .mobile-nav-link:hover {
+  background: #e9ecef;
+  color: #d32f2f;
+  transform: translateX(5px);
+}
+
+.mobile-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #e9ecef;
+  border-left: 3px solid #b71c1c;
+  margin-left: 15px;
+  animation: mobileSubmenuSlideDown 0.3s ease-out;
+}
+
+.mobile-submenu li {
+  margin-bottom: 0;
+}
+
+.mobile-submenu .mobile-nav-link {
+  padding: 10px 30px;
+  font-size: 13px;
+  color: #555;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.mobile-submenu .mobile-nav-link:hover {
+  background: #dee2e6;
+  color: #d32f2f;
+  transform: translateX(5px);
+}
+
+@keyframes mobileDropdownSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobileSubmenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { 
+    transform: translateX(100%); 
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+
+/* Responsive Design - Comprehensive Breakpoints */
+
+/* Extra Large Screens (1400px+) */
+@media (min-width: 1400px) {
+  .header-container {
+    max-width: 1600px;
+  }
+  
+  .nav-menu {
+    gap: 40px;
+  }
+  
+  .nav-link {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+  
+  .admin-bar {
+    display: flex !important;
+    right: 100px;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple {
+    padding: 10px 16px !important;
+    min-width: 120px !important;
+    max-width: 140px !important;
+    width: 120px !important;
+    font-size: 12px !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple .goog-te-menu-value {
+    font-size: 12px !important;
+  }
+}
+
+/* Large Screens (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .header-container {
+    padding: 0 15px;
+    gap: 20px;
+  }
+  
+  .logo {
+    max-width: 220px;
+    min-width: 180px;
+  }
+  
+  .navigation {
+    display: flex !important;
+    flex: 1;
+    max-width: 700px;
+  }
+  
+  .nav-menu {
+    gap: 12px;
+  }
+  
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+  
+  .company-name {
+    font-size: 22px !important;
+  }
+  
+  .company-type {
+    font-size: 14px !important;
+  }
+  
+  .logo-icon {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .logo-image {
+    height: 100px !important;
+  }
+  
+  .admin-bar {
+    display: flex !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple {
+    padding: 8px 14px !important;
+    min-width: 110px !important;
+    max-width: 130px !important;
+    width: 110px !important;
+    font-size: 11px !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple .goog-te-menu-value {
+    font-size: 11px !important;
+  }
+  
+  /* Malayalam specific adjustments for large screens */
+  body[lang="ml"] .nav-menu,
+  body[lang="malayalam"] .nav-menu {
+    margin-right: 330px !important;
+  }
+  
+  body[lang="ml"] .header-container,
+  body[lang="malayalam"] .header-container {
+    gap: 25px !important;
+  }
+}
+
+/* Tablet Landscape (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header-container {
+    padding: 0 10px;
+    gap: 15px;
+  }
+  
+  .logo {
+    max-width: 200px;
+    min-width: 160px;
+  }
+  
+  .navigation {
+    display: flex !important;
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .nav-menu {
+    gap: 12px;
+  }
+  
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  
+  .company-name {
+    font-size: 20px !important;
+  }
+  
+  .company-type {
+    font-size: 12px !important;
+  }
+  
+  .admin-bar {
+    display: flex !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple {
+    padding: 6px 12px !important;
+    min-width: 100px !important;
+    max-width: 120px !important;
+    width: 100px !important;
+    font-size: 10px !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple .goog-te-menu-value {
+    font-size: 10px !important;
+  }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-container {
+    padding: 0 8px;
+    gap: 10px;
+  }
+  
+  .logo {
+    max-width: 180px;
+    min-width: 140px;
+  }
+  
+  .navigation {
+    display: none !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+  
+  .company-name {
+    font-size: 18px !important;
+  }
+  
+  .company-type {
+    font-size: 11px !important;
+  }
+  
+  .logo-icon {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  
+  .logo-image {
+    height: 90px !important;
+  }
+  
+  .header {
+    height: 120px !important;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    height: 100px;
+  }
+  
+  .header-container {
+    padding: 0 20px;
+  }
+  
+  .logo {
+    gap: 12px;
+    max-width: 180px;
+  }
+  
+  .logo-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo-image {
+    height: 80px;
+  }
+  
+  .company-name {
+    font-size: 20px;
+  }
+  
+  .company-type {
+    font-size: 14px;
+  }
+  
+  .navigation {
+    display: none !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex !important;
+    width: 48px;
+    height: 48px;
+    right: 20px;
+  }
+  
+  .mobile-menu-toggle span {
+    width: 22px;
+    height: 3px;
+  }
+}
+
+/* Tablet Portrait (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .header {
+    height: 90px;
+  }
+  
+  .header-container {
+    padding: 0 15px;
+  }
+  
+  .logo {
+    gap: 10px;
+    max-width: 160px;
+  }
+  
+  .logo-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .logo-image {
+    height: 70px;
+  }
+  
+  .company-name {
+    font-size: 18px;
+  }
+  
+  .company-type {
+    font-size: 12px;
+  }
+  
+  .navigation {
+    display: none !important;
+  }
+  
+  .admin-bar {
+    display: none !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple {
+    padding: 6px 12px !important;
+    min-width: 100px !important;
+    max-width: 120px !important;
+    width: 100px !important;
+    font-size: 10px !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple .goog-te-menu-value {
+    font-size: 10px !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex !important;
+    width: 44px;
+    height: 44px;
+    right: 15px;
+  }
+  
+  .mobile-menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+/* Mobile Landscape (481px - 767px) */
+@media (max-width: 767px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .navigation {
+    display: none;
+  }
+  
+  .admin-bar {
+    display: none;
+  }
+}
+
+/* Mobile Portrait (up to 480px) */
+@media (max-width: 480px) {
+  .header {
+    height: 80px;
+  }
+  
+  .header-container {
+    padding: 0 15px;
+    gap: 8px;
+  }
+  
+  .logo {
+    gap: 8px;
+    max-width: 140px;
+    min-width: 120px;
+    flex-shrink: 0;
+  }
+  
+  .logo-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo-image {
+    height: 60px;
+  }
+  
+  .company-name {
+    font-size: 16px;
+  }
+  
+  .company-type {
+    font-size: 10px;
+  }
+  
+  .mobile-menu-toggle {
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    padding: 6px;
+  }
+  
+  .mobile-menu-toggle span {
+    width: 18px;
+    height: 2px;
+  }
+}
+
+/* Additional responsive utilities */
+@media (max-width: 1024px) {
+  .navigation.active {
+    display: block;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 300px;
+    bottom: 0;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    transform: none;
+    overflow-y: auto;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  .nav-link {
+    display: flex;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f1;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background: #f8f9fa;
+    color: #d32f2f;
+  }
+  
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    margin-top: 0;
+    padding: 0;
+    background: transparent;
+    animation: none;
+    display: block;
+    min-width: auto;
+  }
+  
+  .dropdown-item {
+    padding: 14px 40px;
+    font-size: 15px;
+    border-bottom: 1px solid #f0f0f1;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    transform: none;
+    background: #f8f9fa;
+    color: #d32f2f;
+  }
+}
+
+/* Focus states for accessibility */
+.nav-link:focus,
+.mobile-menu-toggle:focus {
+  outline: 2px solid #007cba;
+  outline-offset: 2px;
+}
+
+/* Loading and disabled states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Language Selector in Navigation Bar */
+.language-selector-nav {
+  display: flex !important;
+  align-items: center;
+  margin-left: 8px;
+  position: absolute !important;
+  right: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 1003 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Google Translate Widget Styling */
+.language-selector-nav #google_translate_element {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.language-selector-nav .goog-te-gadget {
+  display: inline-block !important;
+  font-size: 12px !important;
+  color: #333 !important;
+  white-space: nowrap !important;
+}
+
+.language-selector-nav .goog-te-gadget-simple {
+  background: transparent !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  font-size: 12px !important;
+  color: #333 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  min-width: 120px !important;
+  width: 120px !important;
+}
+
+.language-selector-nav .goog-te-gadget-simple:hover {
+  background: #f5f5f5 !important;
+  border-color: #999 !important;
+}
+
+.language-selector-nav .goog-te-gadget-simple .goog-te-menu-value {
+  color: #333 !important;
+  font-size: 12px !important;
+}
+
+.language-selector-nav .goog-te-gadget-simple .goog-te-menu-value:after {
+  content: " ▼" !important;
+  font-size: 10px !important;
+  color: #666 !important;
+}
+
+/* Malayalam Language Specific Adjustments */
+body[lang="ml"] .nav-menu,
+body[lang="malayalam"] .nav-menu {
+  margin-right: 300px !important; /* Extra spacing for Malayalam text */
+}
+
+body[lang="ml"] .header-container,
+body[lang="malayalam"] .header-container {
+  gap: 30px !important; /* Increased gap for Malayalam */
+}
+
+body[lang="ml"] .navigation,
+body[lang="malayalam"] .navigation {
+  margin-right: 30px !important; /* Additional margin for Malayalam */
+}
+
+/* Ensure Google Translate element is properly sized */
+.language-selector-nav #google_translate_element {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 120px !important;
+  min-height: 32px !important;
+}
+
+.language-selector-nav .goog-te-gadget {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 120px !important;
+  min-height: 32px !important;
+}
+
+.language-selector-nav .language-selector {
+  position: relative;
+  z-index: 1002;
+}
+
+.language-selector-nav .language-selector #google_translate_element {
+  display: inline-block;
+}
+
+/* Style Google Translate widget to match navigation items */
+.language-selector-nav .goog-te-gadget-simple {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  color: #333333 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  display: inline-block !important;
+  align-items: center !important;
+  gap: 4px !important;
+  min-width: 120px !important;
+  max-width: 100px !important;
+  width: 100px !important;
+  height: auto !important;
+  min-height: 32px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  overflow: visible !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.language-selector-nav .goog-te-gadget-simple:hover {
+  background: #f8f9fa !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  border-color: #d0d0d0 !important;
+  color: #d32f2f !important;
+}
+
+.language-selector-nav .goog-te-gadget-simple .goog-te-menu-value {
+  color: #333333 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  text-shadow: none !important;
+}
+
+.language-selector-nav .goog-te-gadget-simple .goog-te-menu-value:after {
+  content: "▼" !important;
+  font-size: 8px !important;
+  margin-left: 4px !important;
+  color: #666666 !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+/* Removed duplicate language selector styles */
+
+/* Small Mobile Screens (up to 360px) */
+@media (max-width: 360px) {
+  .header {
+    height: 70px;
+  }
+  
+  .header-container {
+    padding: 0 10px;
+  }
+  
+  .logo {
+    gap: 6px;
+    max-width: 120px;
+  }
+  
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .logo-image {
+    height: 50px;
+  }
+  
+  .company-name {
+    font-size: 14px;
+  }
+  
+  .company-type {
+    font-size: 8px;
+  }
+  
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+    right: 10px;
+    padding: 4px;
+  }
+  
+  .mobile-menu-toggle span {
+    width: 16px;
+    height: 2px;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple {
+    padding: 6px 8px !important;
+    min-width: 60px !important;
+    max-width: 80px !important;
+    width: 80px !important;
+    font-size: 10px !important;
+  }
+  
+  .language-selector-nav .goog-te-gadget-simple .goog-te-menu-value {
+    font-size: 10px !important;
+  }
+}
+
+/* CRITICAL: Force mobile menu toggle visibility - highest priority */
+@media (max-width: 1024px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10001 !important;
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: linear-gradient(135deg, #d32f2f, #b71c1c) !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.5) !important;
+    width: 44px !important;
+    height: 44px !important;
+    cursor: pointer !important;
+  }
+  
+  /* Keep language selector visible on mobile */
+  .language-selector-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    right: 70px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1003 !important;
+  }
+
+  /* Google Translate widget responsive styles for mobile */
+  .language-selector-nav #google_translate_element {
+    display: inline-block !important;
+  }
+
+  .language-selector-nav .goog-te-gadget {
+    font-size: 10px !important;
+    padding: 6px 12px !important;
+    min-width: 70px !important;
+    max-width: 100px !important;
+  }
+
+  .language-selector-nav .goog-te-gadget-simple a {
+    font-size: 10px !important;
+  }
+  
+  /* Force language selector to be visible on all screen sizes */
+  .language-selector {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  #google_translate_element {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Ensure mobile menu overlay is always visible when open */
+  .mobile-menu-overlay {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 100000 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    pointer-events: auto !important;
+  }
+  
+  .mobile-menu-content {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 100001 !important;
+    position: relative !important;
+    background: #ffffff !important;
+    width: 300px !important;
+    height: 100vh !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* ULTRA CRITICAL: Force mobile menu visibility when state is open */
+.mobile-menu-overlay {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 100000 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  pointer-events: auto !important;
+}
+
+.mobile-menu-content {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 100001 !important;
+  position: relative !important;
+  background: #ffffff !important;
+  width: 300px !important;
+  height: 100vh !important;
+  transform: translateX(0) !important;
+  pointer-events: auto !important;
+}
+
+/* Higher z-index values to appear above festival animation */
+.navigation .dropdown-menu,
+.navigation .dropdown-item,
+.navigation .submenu,
+.navigation .submenu-item {
+  z-index: 10005 !important;
+  position: relative !important;
+}
+
+/* Additional override for dropdown menu specifically */
+ul.dropdown-menu {
+  z-index: 10005 !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Ensure all dropdown items are visible */
+ul.dropdown-menu li:first-child,
+ul.dropdown-menu li:nth-child(2),
+ul.dropdown-menu li:nth-child(3) {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  min-height: 48px !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+  margin: 2px 0 !important;
+}
+
+/* Force visibility for first three dropdown items */
+ul.dropdown-menu li:first-child .dropdown-item,
+ul.dropdown-menu li:nth-child(2) .dropdown-item,
+ul.dropdown-menu li:nth-child(3) .dropdown-item {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #333 !important;
+  background: #ffffff !important;
+  padding: 14px 22px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  height: auto !important;
+  min-height: 48px !important;
+}
+
+/* Ensure Future Outlook button is always visible */
+.nav-menu .dropdown {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.nav-menu .dropdown .nav-link {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure dropdown content is visible on desktop */
+@media (min-width: 769px) {
+  .dropdown-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  .dropdown-menu li {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 48px !important;
+    overflow: visible !important;
+  }
+  
+  .dropdown-item {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #333 !important;
+    background: #ffffff !important;
+    border: none !important;
+    height: auto !important;
+    min-height: 48px !important;
+    overflow: visible !important;
+  }
+}
+
+/* Tablet responsive styles for Google Translate widget */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .language-selector-nav #google_translate_element {
+    display: inline-block !important;
+  }
+
+  .language-selector-nav .goog-te-gadget {
+    font-size: 10px !important;
+    padding: 7px 11px !important;
+    min-width: 75px !important;
+    max-width: 110px !important;
+  }
+
+  .language-selector-nav .goog-te-gadget-simple a {
+    font-size: 10px !important;
+  }
+}
+
+/* Small tablet responsive styles */
+@media (max-width: 768px) and (min-width: 481px) {
+  .language-selector-nav {
+    right: 60px !important;
+  }
+
+  .language-selector-nav .goog-te-gadget {
+    font-size: 9px !important;
+    padding: 6px 12px !important;
+    min-width: 65px !important;
+    max-width: 95px !important;
+  }
+
+  .language-selector-nav .goog-te-gadget-simple a {
+    font-size: 9px !important;
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 480px) {
+  .language-selector-nav {
+    right: 50px !important;
+  }
+
+  .language-selector-nav .goog-te-gadget {
+    font-size: 8px !important;
+    padding: 5px 8px !important;
+    min-width: 60px !important;
+    max-width: 85px !important;
+  }
+
+  .language-selector-nav .goog-te-gadget-simple a {
+    font-size: 8px !important;
+  }
+}
+

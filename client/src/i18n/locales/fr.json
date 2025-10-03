@@ -1,0 +1,238 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "service": "Services",
+    "futureOutlook": "Perspective Future",
+    "more": "Plus",
+    "contact": "Contact",
+    "aim": "Notre Objectif",
+    "mission": "Notre Mission",
+    "vision": "Notre Vision",
+    "wyenfosAds": "Annonces Wyenfos",
+    "legal": "Documents Légaux"
+  },
+  "hero": {
+    "title": "Wyenfos Private Limited",
+    "subtitle": "Effacez vos dépenses nouvelle formule d'épargne",
+    "description": "À l'avant-garde des solutions innovantes pour la transformation numérique et les pratiques commerciales durables."
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "whoWeAre": "Qui Nous Sommes",
+    "whoWeAreDesc": "Wyenfos Private Limited est une entreprise leader dédiée à transformer la façon dont les entreprises abordent la gestion des dépenses et l'optimisation des économies.",
+    "affordableLiving": "Solutions de Vie Abordables",
+    "affordableLivingDesc": "Nous fournissons des solutions complètes qui aident les particuliers et les entreprises à atteindre leurs objectifs financiers grâce à une technologie innovante et une planification stratégique."
+  },
+  "services": {
+    "title": "Nos Services",
+    "overview": "Aperçu des Services",
+    "overviewDesc": "Nous offrons des solutions complètes dans plusieurs domaines pour aider les entreprises à croître à l'ère numérique.",
+    "itServices": "Services IT",
+    "itServicesDesc": "Solutions IT complètes incluant le développement de logiciels, l'intégration de systèmes et le support technique.",
+    "software": "Développement de Logiciels",
+    "softwareDesc": "Solutions logicielles personnalisées adaptées aux besoins et exigences de votre entreprise.",
+    "digital": "Solutions Numériques",
+    "digitalDesc": "Services de transformation numérique incluant applications mobiles, plateformes web et solutions cloud.",
+    "franchises": "Franchises",
+    "franchisesDesc": "Opportunités de franchise d'entreprise avec support complet et orientation.",
+    "supermarkets": "Supermarchés",
+    "supermarketsDesc": "Solutions de gestion retail et supermarché pour des opérations efficaces.",
+    "jewelleries": "Bijouteries",
+    "jewelleriesDesc": "Solutions spécialisées pour la gestion et les opérations de bijouterie."
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Entrer en Contact",
+    "contactDetails": "Détails de Contact",
+    "address": "Adresse",
+    "addressValue": "CJ Tower, Ikkand Warrior Road, Thrissur",
+    "phone": "Téléphone",
+    "email": "Email",
+    "companyName": "Wyenfos Private Limited",
+    "selectBranch": "Sélectionner une Branche:",
+    "noBranches": "Aucune branche configurée pour le moment. Veuillez ajouter des branches via le tableau de bord administrateur.",
+    "customerSupport": "Support Client 24/7",
+    "customerSupportDesc": "Notre équipe dédiée au service client est disponible à tout moment pour toute question, préoccupation ou support dont vous pourriez avoir besoin. Nous sommes là pour rendre votre expérience avec Wyenfos exceptionnelle.",
+    "callUs": "Appelez-nous",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "sendMessage": "Envoyer le Message"
+    },
+    "features": {
+      "helpline": "Support Ligne d'Aide 24/7",
+      "liveChat": "Aide Chat en Direct",
+      "emailSupport": "Support par Email"
+    }
+  },
+  "aim": {
+    "title": "Notre Objectif",
+    "mainTitle": "Transformer l'Excellence Commerciale",
+    "description": "Notre objectif est de révolutionner la façon dont les entreprises abordent la gestion des dépenses et optimisent leurs économies grâce à des solutions technologiques innovantes."
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "mainTitle": "Autonomiser la Transformation Numérique",
+    "description": "Fournir des solutions technologiques de pointe qui permettent aux entreprises d'atteindre une croissance durable et l'excellence opérationnelle."
+  },
+  "vision": {
+    "title": "Notre Vision",
+    "mainTitle": "Diriger l'Innovation dans les Solutions Commerciales",
+    "description": "Être le fournisseur leader de solutions commerciales innovantes qui transforment la façon dont les organisations opèrent et réussissent."
+  },
+  "legal": {
+    "title": "Documents Légaux",
+    "heroTitle": "Documents Légaux",
+    "introTitle": "Documents Officiels de l'Entreprise",
+    "introDesc": "Voici nos documents légaux officiels et certifications qui établissent Wyenfos Private Limited comme une institution commerciale légale et certifiée.",
+    "panCard": "Carte PAN de l'Entreprise",
+    "panCardDesc": "Numéro de Compte Permanent émis par le Département de l'Impôt sur le Revenu, Gouvernement de l'Inde",
+    "isoCert": "Certificat ISO 9001:2015",
+    "isoCertDesc": "Certification du Système de Gestion de la Qualité de QRO - Organisation de Recherche sur la Qualité",
+    "incorporation": "Certificat d'Incorporation",
+    "incorporationDesc": "Certificat officiel d'incorporation du Ministère des Affaires Corporatives, Gouvernement de l'Inde",
+    "companyInfo": "Informations de l'Entreprise",
+    "companyName": "Nom de l'Entreprise:",
+    "companyNameValue": "Wyenfos Private Limited",
+    "cin": "Numéro d'Identité Corporative:",
+    "pan": "Numéro PAN:",
+    "incorporationDate": "Date d'Incorporation:",
+    "incorporationDateValue": "2 février 2021",
+    "registeredAddress": "Adresse Enregistrée:",
+    "registeredAddressValue": "CJ Tower, Deuxième Étage, 9/640/38/2, En face du Bureau Malayala Manorama, Ikkand Warrior Thrissur KL 680001, Inde",
+    "isoCertification": "Certification ISO:",
+    "isoCertificationValue": "Système de Gestion de la Qualité ISO 9001:2015",
+    "legalNotice": "Avis Légal",
+    "legalNoticeText1": "Tous les documents affichés sur cette page sont officiels et légalement valides. Wyenfos Private Limited est une entreprise légalement incorporée sous la Loi sur les Sociétés, 2013 (18 de 2013) et respecte toutes les exigences réglementaires.",
+    "legalNoticeText2": "Notre certification ISO 9001:2015 démontre notre engagement envers les systèmes de gestion de la qualité et l'amélioration continue dans nos services, incluant les services IT, développement de logiciels, programmation, implémentation, bons numériques, franchises, supermarchés, bijouteries et plus.",
+    "legalNoticeText3": "Pour la vérification de ces documents ou les enquêtes légales, veuillez nous contacter via nos canaux officiels."
+  },
+  "wyenfosAds": {
+    "title": "Annonces Wyenfos",
+    "heroTitle": "Annonces Wyenfos",
+    "heroSubtitle": "Solutions Publicitaires Révolutionnaires",
+    "introTitle": "Bienvenue aux Annonces Wyenfos",
+    "introDesc": "Découvrez des solutions publicitaires innovantes qui transforment la présence numérique de votre marque et génèrent un engagement significatif.",
+    "comingSoon": "Fonctionnalités Passionnantes à Venir",
+    "comingSoonDesc": "Nous travaillons sur des fonctionnalités incroyables qui révolutionneront votre expérience publicitaire.",
+    "gallery": "Notre Galerie",
+    "newImages": "Mises à Jour les Plus Récentes",
+    "posters": "Affiches Créatives",
+    "videoSection": "Regardez Notre Histoire"
+  },
+  "footer": {
+    "quickLinks": "Liens Rapides",
+    "getInTouch": "Entrer en Contact",
+    "phone": "Téléphone",
+    "email": "Email",
+    "copyright": "Copyright©2024 Wyenfos pvt ltd. Tous Droits Réservés."
+  },
+  "common": {
+    "readMore": "Lire Plus",
+    "learnMore": "En Savoir Plus",
+    "getStarted": "Commencer",
+    "contactUs": "Nous Contacter",
+    "viewAll": "Voir Tout",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "menu": "Menu",
+    "search": "Rechercher",
+    "loading": "Chargement..."
+  },
+  "ourCompanies": {
+    "heroTitle": "Nos Entreprises",
+    "heroSubtitle": "Découvrez notre portefeuille diversifié d'entreprises innovantes",
+    "categories": {
+      "technology": "Technologie",
+      "healthcare": "Soins de Santé",
+      "water": "Solutions d'Eau",
+      "finance": "Finance",
+      "retail": "Commerce de Détail",
+      "education": "Éducation"
+    },
+    "companies": {
+      "wyenfosInfotech": {
+        "name": "Wyenfos Infotech",
+        "description": "Fournisseur leader de solutions technologiques avec expertise en développement de logiciels innovants, transformation numérique et services IT matures pour entreprises mondiales."
+      },
+      "ayur4life": {
+        "name": "Ayur4Life",
+        "description": "Solutions de santé holistiques centrées sur les traitements ayurvédiques et les approches de bien-être holistiques."
+      },
+      "wyenfosPureDrops": {
+        "name": "Wyenfos Pure Drops",
+        "description": "Systèmes de purification d'eau premium qui assurent une eau potable pure et sûre pour les communautés et les entreprises."
+      },
+      "wyenfosGold": {
+        "name": "Wyenfos Gold",
+        "description": "Services financiers fiables et solutions d'investissement qui aident les particuliers et les entreprises à faire croître leur richesse en toute sécurité."
+      },
+      "wyenfosBills": {
+        "name": "Wyenfos Bills",
+        "description": "Solutions complètes de gestion des factures qui optimisent les processus de paiement et le suivi financier pour les entreprises."
+      },
+      "wyenfosCash": {
+        "name": "Wyenfos Cash",
+        "description": "Solutions de paiement numérique et services de gestion de trésorerie pour entreprises modernes et particuliers."
+      }
+    },
+    "featured": {
+      "title": "Entreprise en Vedette",
+      "companyName": "Wyenfos Infotech",
+      "description": "Notre entreprise technologique phare qui mène l'innovation dans les solutions numériques."
+    }
+  },
+  "mainContent": {
+    "isoCertified": "Entreprise Certifiée ISO 9001:2015",
+    "aboutUsDesc": "Wyenfos Private Limited est une entreprise pionnière dédiée à transformer la façon dont les entreprises abordent la gestion des dépenses et l'optimisation des économies grâce à des solutions technologiques innovantes.",
+    "elevateProsperity": "Élever la Prospérité",
+    "inspiringSavings": "Économies Inspirantes",
+    "transformIndia": "Transformer le Paysage Financier de l'Inde",
+    "ourAim": "Notre Objectif",
+    "ourAimDesc": "Notre objectif est de révolutionner la façon dont les entreprises abordent la gestion des dépenses et l'optimisation des économies grâce à des solutions technologiques innovantes.",
+    "ourMission": "Notre Mission",
+    "ourMissionDesc": "Notre mission est de fournir des solutions complètes qui aident les particuliers et les entreprises à atteindre leurs objectifs financiers grâce à une technologie innovante et une planification stratégique.",
+    "ourVision": "Notre Vision",
+    "ourVisionDesc": "Notre vision est de créer un monde où la gestion financière soit simplifiée, accessible et bénéfique pour tous grâce à des solutions technologiques de pointe.",
+    "ourKeyAttributes": "Nos Attributs Clés",
+    "crestm": "CRESTM",
+    "customerCentric": "Approche Centrée sur le Client",
+    "reliable": "Solutions Fiables",
+    "efficient": "Opérations Efficaces",
+    "secure": "Systèmes Sécurisés",
+    "transparent": "Processus Transparents",
+    "modest": "Tarification Modeste",
+    "culturalPride": "Fierté Culturelle",
+    "economicRise": "Ascension Économique",
+    "lifesHighs": "Hauts de la Vie",
+    "ourMilestone": "Notre Jalon",
+    "wyenfosAds": "Annonces Wyenfos",
+    "milestoneDesc": "Présentation des Annonces Wyenfos - une plateforme publicitaire révolutionnaire qui remet de l'argent dans votre poche. Regardez des annonces, gagnez des récompenses et transformez votre temps de visionnage en revenus précieux.",
+    "cashVapase": "Cash Vapase",
+    "cashVapaseDesc1": "Cash Vapase est notre solution financière innovante qui vous aide à économiser de l'argent sur les dépenses quotidiennes.",
+    "cashVapaseDesc2": "Téléchargez vos factures et obtenez de l'argent liquide lorsque la file atteint Rs.50,000.",
+    "cashVapaseDesc3": "Rejoignez des milliers d'utilisateurs qui économisent déjà avec Cash Vapase.",
+    "yourSavingsPartner": "Votre Partenaire d'Épargne",
+    "whyJustWatch": "Pourquoi Juste Regarder Quand Vous Pouvez Gagner?",
+    "wyenfosAdsPutsMoney": "Les Annonces Wyenfos Mettent de l'Argent dans Votre Poche",
+    "transformViewingTime": "Transformez votre temps de visionnage en revenus précieux avec notre plateforme publicitaire révolutionnaire.",
+    "joinThousands": "Rejoignez des milliers d'utilisateurs qui gagnent déjà en regardant.",
+    "careersWithUs": "Carrières avec Nous",
+    "sendYourCV": "Envoyez votre CV à:",
+    "cvEmail": "hr@wyenfos.com",
+    "whatWeOffer": "Ce Que Nous Offrons",
+    "realWorldExperience": "Expérience du monde réel dans la technologie de pointe",
+    "skillDevelopment": "Développement des compétences et mentorat",
+    "certification": "Certification et avancement de carrière"
+  },
+  "quickLinks": "Liens Rapides",
+  "getInTouch": "Entrer en Contact",
+  "selectBranch": "Sélectionner une Branche:",
+  "noBranches": "Aucune branche configurée pour le moment. Veuillez ajouter des branches via le tableau de bord administrateur.",
+  "copyright": "Copyright©2024 Wyenfos pvt ltd. Tous Droits Réservés."
+}

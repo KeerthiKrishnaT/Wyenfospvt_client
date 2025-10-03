@@ -1,0 +1,273 @@
+/* Our Mission Page Styles */
+.our-mission-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Hero Section */
+.mission-hero {
+  color: white;
+  text-align: center;
+  padding: 150px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.mission-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.mission-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.title-line {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  border-radius: 2px;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.mission-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: fadeInUp 1s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Content */
+.mission-main {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 30px;
+}
+
+/* Short Description Section */
+.mission-short-description {
+  margin-bottom: 60px;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.description-content {
+  text-align: center;
+  max-width: 1200px; /* Reduced from 1500px */
+  margin: 0 auto;
+  padding: 25px; /* Reduced from 40px */
+  background: #e8f4fd;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.description-content p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Detailed Description Section */
+.mission-detailed-description {
+  margin-bottom: 60px;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.detailed-content {
+  max-width: 80vw; /* Reduced from 90vw */
+  margin: 0 auto;
+  padding: 30px; /* Reduced from 50px */
+  background: #f0f8ff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.detailed-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Image Section */
+.mission-image-section {
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.image-content {
+  text-align: center;
+  max-width: 500px; /* Further reduced from 700px */
+  margin: 0 auto;
+  padding: 15px; /* Further reduced from 20px */
+}
+
+.mission-image {
+  max-width: 35%; /* Further reduced from 45% */
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  background: none;
+}
+
+.mission-image:hover {
+  transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-hero {
+    min-height: 500px;
+    padding: 100px 0;
+  }
+  
+  .mission-title-container {
+    gap: 20px;
+  }
+  
+  .title-line {
+    width: 60px;
+    height: 2px;
+  }
+  
+  .mission-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .mission-main {
+    padding: 60px 0;
+  }
+  
+  .description-content {
+    padding: 30px 20px;
+  }
+  
+  .description-content p {
+    font-size: 1.4rem;
+  }
+  
+  .detailed-content {
+    padding: 30px 20px;
+  }
+  
+  .detailed-content p {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  
+  .image-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-hero {
+    padding: 80px 0;
+    min-height: 450px;
+  }
+  
+  .mission-title-container {
+    gap: 15px;
+  }
+  
+  .title-line {
+    width: 40px;
+    height: 2px;
+  }
+  
+  .mission-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+  
+  .description-content p {
+    font-size: 1.2rem;
+  }
+  
+  .detailed-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Font Size Adjustments for 100% Zoom - Our Mission Page */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  /* Hero Section */
+  .mission-hero-title {
+    font-size: 3rem !important;
+  }
+  
+  .mission-hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  
+  /* Content */
+  .mission-content-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .mission-content-description {
+    font-size: 1rem !important;
+  }
+  
+  .description-content p {
+    font-size: 1.1rem !important;
+  }
+  
+  .detailed-content p {
+    font-size: 0.95rem !important;
+  }
+}
+

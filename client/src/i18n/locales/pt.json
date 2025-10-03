@@ -1,0 +1,239 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "service": "Services",
+    "futureOutlook": "Future Outlook",
+    "more": "More",
+    "contact": "Contact",
+    "aim": "Our Aim",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "wyenfosAds": "Wyenfos Ads",
+    "legal": "Legal Documents"
+  },
+  "hero": {
+    "title": "Wyenfos Private Limited",
+    "subtitle": "Wipe Your Expenditure New Formula of Savings",
+    "description": "At the forefront of innovative solutions for digital transformation and sustainable business practices."
+  },
+  "about": {
+    "title": "About Us",
+    "whoWeAre": "Who We Are",
+    "whoWeAreDesc": "Wyenfos Private Limited is a leading company dedicated to transforming how businesses approach expenditure management and savings optimization.",
+    "affordableLiving": "Affordable Living Solutions",
+    "affordableLivingDesc": "We provide comprehensive solutions that help individuals and businesses achieve their financial goals through innovative technology and strategic planning."
+  },
+  "services": {
+    "title": "Our Services",
+    "overview": "Service Overview",
+    "overviewDesc": "We offer comprehensive solutions across multiple domains to help businesses grow in the digital age.",
+    "itServices": "IT Services",
+    "itServicesDesc": "Complete IT solutions including software development, system integration, and technical support.",
+    "software": "Software Development",
+    "softwareDesc": "Customized software solutions tailored to your business needs and requirements.",
+    "digital": "Digital Solutions",
+    "digitalDesc": "Digital transformation services including mobile apps, web platforms, and cloud solutions.",
+    "franchises": "Franchises",
+    "franchisesDesc": "Business franchise opportunities with comprehensive support and guidance.",
+    "supermarkets": "Supermarkets",
+    "supermarketsDesc": "Retail and supermarket management solutions for efficient operations.",
+    "jewelleries": "Jewelleries",
+    "jewelleriesDesc": "Specialized solutions for jewellery business management and operations."
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Get in Touch",
+    "contactDetails": "Contact Details",
+    "address": "Address",
+    "addressValue": "CJ Tower, Ikkand Warrior Road, Thrissur",
+    "phone": "Phone",
+    "email": "Email",
+    "companyName": "Wyenfos Private Limited",
+    "selectBranch": "Select Branch:",
+    "noBranches": "No branches configured yet. Please add branches through the admin dashboard.",
+    "customerSupport": "24/7 Customer Support",
+    "customerSupportDesc": "Our dedicated customer service team is available at all times for any questions, concerns, or support you might need. We're here to make your experience with Wyenfos exceptional.",
+    "callUs": "Call Us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "sendMessage": "Send Message"
+    },
+    "features": {
+      "helpline": "24/7 Helpline Support",
+      "liveChat": "Live Chat Help",
+      "emailSupport": "Email Support"
+    }
+  },
+  "aim": {
+    "title": "Our Aim",
+    "mainTitle": "Transforming Business Excellence",
+    "description": "Our aim is to revolutionize how businesses approach expenditure management and savings optimization through innovative technology solutions."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "mainTitle": "Empowering Digital Transformation",
+    "description": "To provide cutting-edge technology solutions that enable businesses to achieve sustainable growth and operational excellence."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "mainTitle": "Leading Innovation in Business Solutions",
+    "description": "To be the leading provider of innovative business solutions that transform how organizations operate and succeed."
+  },
+  "legal": {
+    "title": "Legal Documents",
+    "heroTitle": "Legal Documents",
+    "introTitle": "Official Company Documents",
+    "introDesc": "Here are our official legal documents and certifications that establish Wyenfos Private Limited as a legal and certified business institution.",
+    "panCard": "Company PAN Card",
+    "panCardDesc": "Permanent Account Number issued by Income Tax Department, Government of India",
+    "isoCert": "ISO 9001:2015 Certificate",
+    "isoCertDesc": "Quality Management System Certification from QRO - Quality Research Organisation",
+    "incorporation": "Incorporation Certificate",
+    "incorporationDesc": "Official incorporation certificate from Ministry of Corporate Affairs, Government of India",
+    "companyInfo": "Company Information",
+    "companyName": "Company Name:",
+    "companyNameValue": "Wyenfos Private Limited",
+    "cin": "Corporate Identity Number:",
+    "pan": "PAN Number:",
+    "incorporationDate": "Incorporation Date:",
+    "incorporationDateValue": "February 2, 2021",
+    "registeredAddress": "Registered Address:",
+    "registeredAddressValue": "CJ Tower, Second Floor, 9/640/38/2, Opposite Malayala Manorama Office, Ikkand Warrior Thrissur KL 680001, India",
+    "isoCertification": "ISO Certification:",
+    "isoCertificationValue": "ISO 9001:2015 Quality Management System",
+    "legalNotice": "Legal Notice",
+    "legalNoticeText1": "All documents displayed on this page are official and legally valid. Wyenfos Private Limited is a legally incorporated company under Companies Act, 2013 (18 of 2013) and complies with all regulatory requirements.",
+    "legalNoticeText2": "Our ISO 9001:2015 certification demonstrates our commitment to quality management systems and continuous improvement in our services, including IT services, software development, programming, implementation, digital vouchers, franchises, supermarkets, jewelleries, and more.",
+    "legalNoticeText3": "For verification of these documents or legal inquiries, please contact us through our official channels."
+  },
+  "wyenfosAds": {
+    "title": "Wyenfos Ads",
+    "heroTitle": "Wyenfos Ads",
+    "heroSubtitle": "Revolutionary Advertising Solutions",
+    "introTitle": "Welcome to Wyenfos Ads",
+    "introDesc": "Discover innovative advertising solutions that transform your brand's digital presence and drive meaningful engagement.",
+    "comingSoon": "Exciting Features Coming Soon",
+    "comingSoonDesc": "We're working on incredible features that will revolutionize your advertising experience.",
+    "gallery": "Our Gallery",
+    "newImages": "Latest Updates",
+    "posters": "Creative Posters",
+    "videoSection": "Watch Our Story"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get in Touch",
+    "phone": "Phone",
+    "email": "Email",
+    "copyright": "Copyright©2024 Wyenfos pvt ltd. All Rights Reserved."
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "viewAll": "View All",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "menu": "Menu",
+    "search": "Search",
+    "loading": "Loading..."
+  },
+  "ourCompanies": {
+    "heroTitle": "Our Companies",
+    "heroSubtitle": "Discover our diverse portfolio of innovative companies",
+    "categories": {
+      "technology": "Technology",
+      "healthcare": "Healthcare",
+      "water": "Water Solutions",
+      "finance": "Finance",
+      "retail": "Retail",
+      "education": "Education"
+    },
+    "companies": {
+      "wyenfosInfotech": {
+        "name": "Wyenfos Infotech",
+        "description": "Leading technology solutions provider with expertise in innovative software development, digital transformation, and mature IT services for global businesses."
+      },
+      "ayur4life": {
+        "name": "Ayur4Life",
+        "description": "Holistic health solutions focused on ayurvedic treatments and comprehensive wellness approaches."
+      },
+      "wyenfosPureDrops": {
+        "name": "Wyenfos Pure Drops",
+        "description": "Premium water purification systems that ensure pure and safe drinking water for communities and businesses."
+      },
+      "wyenfosGold": {
+        "name": "Wyenfos Gold",
+        "description": "Reliable financial services and investment solutions that help individuals and businesses grow their wealth securely."
+      },
+      "wyenfosBills": {
+        "name": "Wyenfos Bills",
+        "description": "Comprehensive bill management solutions that optimize payment processes and financial tracking for businesses."
+      },
+      "wyenfosCash": {
+        "name": "Wyenfos Cash",
+        "description": "Digital payment solutions and cash management services for modern businesses and individuals."
+      }
+    },
+    "featured": {
+      "title": "Featured Company",
+      "companyName": "Wyenfos Infotech",
+      "description": "Our flagship technology company that leads innovation in digital solutions."
+    }
+  },
+  "mainContent": {
+    "isoCertified": "ISO 9001:2015 Certified Company",
+    "aboutUsDesc": "Wyenfos Private Limited is a pioneering company dedicated to transforming how businesses approach expenditure management and savings optimization through innovative technology solutions.",
+    "elevateProsperity": "Elevate Prosperity",
+    "inspiringSavings": "Inspiring Savings",
+    "transformIndia": "Transform India's Financial Landscape",
+    "ourAim": "Our Aim",
+    "ourAimDesc": "Our aim is to revolutionize how businesses approach expenditure management and savings optimization through innovative technology solutions.",
+    "ourMission": "Our Mission",
+    "ourMissionDesc": "Our mission is to provide comprehensive solutions that help individuals and businesses achieve their financial goals through innovative technology and strategic planning.",
+    "ourVision": "Our Vision",
+    "ourVisionDesc": "Our vision is to create a world where financial management is simplified, accessible, and beneficial for everyone through cutting-edge technology solutions.",
+    "ourKeyAttributes": "Our Key Attributes",
+    "crestm": "CRESTM",
+    "customerCentric": "Customer-Centric Approach",
+    "reliable": "Reliable Solutions",
+    "efficient": "Efficient Operations",
+    "secure": "Secure Systems",
+    "transparent": "Transparent Processes",
+    "modest": "Modest Pricing",
+    "culturalPride": "Cultural Pride",
+    "economicRise": "Economic Rise",
+    "lifesHighs": "Life's Highs",
+    "ourMilestone": "Our Milestone",
+    "wyenfosAds": "Wyenfos Ads",
+    "milestoneDesc": "Introducing Wyenfos Ads - a revolutionary advertising platform that puts money back in your pocket. Watch ads, earn rewards, and transform your viewing time into valuable income.",
+    "cashVapase": "Cash Vapase",
+    "cashVapaseDesc1": "Cash Vapase is our innovative financial solution that helps you save money on everyday expenses.",
+    "cashVapaseDesc2": "Upload your bills and get cash back when the queue reaches Rs.50,000.",
+    "cashVapaseDesc3": "Join thousands of users who are already saving with Cash Vapase.",
+    "yourSavingsPartner": "Your Savings Partner",
+    "whyJustWatch": "Why Just Watch When You Can Earn?",
+    "wyenfosAdsPutsMoney": "Wyenfos Ads Puts Money in Your Pocket",
+    "transformViewingTime": "Transform your viewing time into valuable income with our revolutionary advertising platform.",
+    "joinThousands": "Join thousands of users who are already earning while they watch.",
+    "careersWithUs": "Careers with Us",
+    "sendYourCV": "Send your CV to:",
+    "cvEmail": "hr@wyenfos.com",
+    "whatWeOffer": "What We Offer",
+    "realWorldExperience": "Real-world experience in cutting-edge technology",
+    "skillDevelopment": "Skill development and mentorship",
+    "certification": "Certification and career advancement"
+  },
+  "quickLinks": "Quick Links",
+  "getInTouch": "Get in Touch",
+  "selectBranch": "Select Branch:",
+  "noBranches": "No branches configured yet. Please add branches through the admin dashboard.",
+  "copyright": "Copyright©2024 Wyenfos pvt ltd. All Rights Reserved.",
+  "_note": "This is a placeholder translation file for pt. Please replace with actual translations."
+}

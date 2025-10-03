@@ -1,0 +1,405 @@
+/* Wyenfos Ads Page Styles */
+.wyenfos-ads-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Hero Section */
+.ads-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px 100px 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  min-height: 500px;
+}
+
+.ads-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.ads-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.ads-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 20px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: fadeInUp 1s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Wyenfos Ads Logo Section */
+.ads-logo-section {
+  margin: 20px 0 0 0;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.wyenfos-ads-logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.wyenfos-ads-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo floating animation */
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Main Content */
+.ads-main {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  width: 100%;
+  margin: 0;
+}
+
+.container-fluid {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 30px;
+}
+
+/* Intro Section */
+.ads-intro-section {
+  margin: 0 20px 80px 20px;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ads-intro-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.ads-intro-img:hover {
+  transform: scale(1.02);
+}
+
+/* Coming Soon Section */
+.ads-coming-soon {
+  margin: 0 20px 80px 20px;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.coming-soon-content {
+  text-align: center;
+}
+
+.coming-soon-img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.coming-soon-img:hover {
+  transform: scale(1.02);
+}
+
+/* Gallery Section */
+.ads-gallery {
+  margin: 0 20px 80px 20px;
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* New Images Section */
+.ads-new-images {
+  margin: 0 20px 80px 20px;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.new-images-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.new-image-item {
+  text-align: center;
+}
+
+.new-ads-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.new-ads-img:hover {
+  transform: scale(1.02);
+}
+
+/* Posters Section */
+.ads-posters {
+  margin: 0 20px 80px 20px;
+  animation: fadeInUp 1s ease-out 1.5s both;
+}
+
+.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.poster-item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.poster-item:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+  transform: translateY(-5px);
+}
+
+.poster-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.poster-item:hover .poster-img {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Section */
+.ads-video-section {
+  margin: 0 20px;
+  animation: fadeInUp 1s ease-out 1.8s both;
+}
+
+.video-content {
+  text-align: center;
+}
+
+.video-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.video-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ads-video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .ads-main {
+    padding: 60px 15px;
+  }
+
+  .ads-hero {
+    padding: 60px 15px 80px 15px;
+    min-height: 400px;
+  }
+
+  .ads-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 15px 0 15px 0;
+  }
+  
+  .wyenfos-ads-logo {
+    max-width: 250px;
+  }
+
+  .ads-main {
+    padding: 60px 0;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .new-images-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .posters-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    padding: 0 10px;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .ads-main {
+    padding: 40px 10px;
+  }
+
+  .ads-hero {
+    padding: 50px 10px 60px 10px;
+    min-height: 350px;
+  }
+  
+  .ads-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin: 25px 0 20px 0;
+  }
+  
+  .wyenfos-ads-logo {
+    max-width: 200px;
+  }
+  
+  .intro-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ads-hero {
+    padding: 80px 0 60px 0;
+    min-height: 300px;
+  }
+
+  .ads-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin: 20px 0 20px 0;
+  }
+
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .video-title {
+    font-size: 1.8rem;
+  }
+}

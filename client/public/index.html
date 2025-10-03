@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Wyenfos - Professional Web Solutions"
+    />
+    <!-- Content Security Policy for Firebase and Google Services -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://translate.google.com https://translate.googleapis.com https://translate-pa.googleapis.com https://www.gstatic.com https://www.google.com https://apis.google.com https://www.googletagmanager.com https://googletagmanager.com;
+      style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://translate.googleapis.com https://www.gstatic.com;
+      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+      img-src 'self' data: blob: https: http:;
+      connect-src 'self' https://*.googleapis.com https://*.google.com https://*.gstatic.com https://*.firebaseapp.com https://*.firebaseio.com https://*.firebasestorage.app https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://google-analytics.com https://analytics.google.com wss://*.firebaseio.com;
+      frame-src 'self' https://*.google.com https://*.googleapis.com https://wyenfospvt.firebaseapp.com;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+    " />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/wyenfos.jpeg" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      // Global variables for better reliability
+      let desktopWidgetInitialized = false;
+      let mobileWidgetInitialized = false;
+      let initializationRetries = 0;
+      const maxRetries = 3;
+      
+      function googleTranslateElementInit() {
+        console.log('🌐 Google Translate callback triggered from index.html');
+        
+        // Add error handling and retry logic
+        try {
+          if (window.google && window.google.translate) {
+            console.log('✅ Google Translate API available');
+            
+               // Initialize single widget that will be moved between desktop and mobile
+               initializeDesktopWidget();
+               
+               // Set up responsive widget positioning
+               setupResponsiveWidget();
+            
+          } else {
+            console.log('❌ Google Translate API not available, retrying...');
+            retryInitialization();
+          }
+        } catch (error) {
+          console.error('❌ Error during Google Translate initialization:', error);
+          retryInitialization();
+        }
+        
+        console.log('✅ Google Translate initialization completed.');
+      }
+      
+         function initializeDesktopWidget() {
+           if (desktopWidgetInitialized) {
+             console.log('⚠️ Desktop widget already initialized, skipping...');
+             return;
+           }
+           
+           const desktopElement = document.getElementById('google_translate_element');
+           if (desktopElement) {
+             try {
+               // Clear any existing content to prevent conflicts
+               desktopElement.innerHTML = '';
+               
+               new window.google.translate.TranslateElement(
+                 {
+                   pageLanguage: 'en',
+                   includedLanguages: 'en,hi,ml,ta,te,kn,bn,gu,pa,mr,or,as,ne,si,es,fr,de,it,pt,ru,ja,ko,zh-CN,zh-TW,ar,th,vi,id,ms,tr',
+                   layout: window.google.translate.TranslateElement.InlineLayout.DROPDOWN,
+                   autoDisplay: false,
+                   multilanguagePage: true
+                 }, 
+                 'google_translate_element'
+               );
+               
+               desktopWidgetInitialized = true;
+               console.log('✅ Desktop Google Translate Widget initialized');
+               
+               // Verify widget was created successfully after a short delay
+               setTimeout(() => {
+                 const widget = desktopElement.querySelector('.goog-te-gadget');
+                 if (!widget) {
+                   console.log('⚠️ Desktop widget not found after initialization, retrying...');
+                   desktopWidgetInitialized = false;
+                   setTimeout(initializeDesktopWidget, 1000);
+                 } else {
+                   console.log('✅ Desktop widget verification successful');
+                   
+                   // Add click event listener to the widget to ensure dropdown works
+                   const trigger = widget.querySelector('a[aria-haspopup="true"]') || 
+                                  widget.querySelector('.goog-te-gadget-simple a') ||
+                                  widget.querySelector('a');
+                   
+                   if (trigger) {
+                     console.log('🔧 Adding custom click handler to trigger dropdown');
+                     trigger.addEventListener('click', function(e) {
+                       e.preventDefault();
+                       e.stopPropagation();
+                       
+                       // Force trigger the Google Translate dropdown
+                       setTimeout(() => {
+                         // Try multiple methods to trigger the dropdown
+                         const event = new MouseEvent('click', {
+                           bubbles: true,
+                           cancelable: true,
+                           view: window
+                         });
+                         
+                         // Dispatch the event on the trigger element
+                         trigger.dispatchEvent(event);
+                         
+                         // Also try triggering on the parent elements
+                         const parent = trigger.parentElement;
+                         if (parent) {
+                           parent.dispatchEvent(event);
+                         }
+                         
+                         // Force focus on the element
+                         trigger.focus();
+                         
+                         console.log('🔄 Custom click handler executed');
+                       }, 10);
+                     });
+                   }
+                 }
+               }, 500);
+               
+             } catch (error) {
+               console.error('❌ Error initializing desktop widget:', error);
+               desktopWidgetInitialized = false;
+               setTimeout(initializeDesktopWidget, 1000);
+             }
+           } else {
+             console.log('⚠️ Desktop element not found, will retry...');
+             setTimeout(() => {
+               if (!desktopWidgetInitialized) {
+                 initializeDesktopWidget();
+               }
+             }, 500);
+           }
+         }
+      
+         function initializeMobileWidget() {
+           const initMobileWidget = () => {
+             if (mobileWidgetInitialized) {
+               return true;
+             }
+             
+             const mobileElement = document.getElementById('google_translate_element_mobile');
+             if (mobileElement) {
+               try {
+                 // Clear any existing content to prevent conflicts
+                 mobileElement.innerHTML = '';
+                 
+                 new window.google.translate.TranslateElement(
+                   {
+                     pageLanguage: 'en',
+                     includedLanguages: 'en,hi,ml,ta,te,kn,bn,gu,pa,mr,or,as,ne,si,es,fr,de,it,pt,ru,ja,ko,zh-CN,zh-TW,ar,th,vi,id,ms,tr',
+                     layout: window.google.translate.TranslateElement.InlineLayout.DROPDOWN,
+                     autoDisplay: false,
+                     multilanguagePage: true
+                   }, 
+                   'google_translate_element_mobile'
+                 );
+                 
+                 mobileWidgetInitialized = true;
+                 console.log('✅ Mobile Google Translate Widget initialized');
+                 
+                 // Verify mobile widget was created successfully after a short delay
+                 setTimeout(() => {
+                   const mobileWidget = mobileElement.querySelector('.goog-te-gadget');
+                   if (!mobileWidget) {
+                     console.log('⚠️ Mobile widget not found after initialization, retrying...');
+                     mobileWidgetInitialized = false;
+                     setTimeout(() => {
+                       if (!mobileWidgetInitialized) {
+                         initMobileWidget();
+                       }
+                     }, 1000);
+                   } else {
+                     console.log('✅ Mobile widget verification successful');
+                   }
+                 }, 500);
+                 
+                 return true;
+               } catch (error) {
+                 console.error('❌ Error initializing mobile widget:', error);
+                 return false;
+               }
+             }
+             return false;
+           };
+           
+           // Try to initialize mobile widget immediately
+           if (!initMobileWidget()) {
+             console.log('⏳ Mobile element not found, will retry when mobile menu is opened');
+             
+             // Set up observer to initialize mobile widget when mobile menu is created
+             const observer = new MutationObserver((mutations) => {
+               mutations.forEach((mutation) => {
+                 if (mutation.type === 'childList') {
+                   mutation.addedNodes.forEach((node) => {
+                     if (node.nodeType === 1 && (node.id === 'google_translate_element_mobile' || node.querySelector('#google_translate_element_mobile'))) {
+                       console.log('🔄 Mobile element detected, initializing widget...');
+                       setTimeout(() => {
+                         if (initMobileWidget()) {
+                           observer.disconnect();
+                         }
+                       }, 100);
+                     }
+                   });
+                 }
+               });
+             });
+             
+             observer.observe(document.body, {
+               childList: true,
+               subtree: true
+             });
+           }
+         }
+      
+         function setupResponsiveWidget() {
+           console.log('🔧 Setting up responsive widget positioning');
+           
+           // Function to move widget based on screen size
+           function moveWidget() {
+             const desktopContainer = document.getElementById('google_translate_element');
+             const mobileContainer = document.getElementById('google_translate_element_mobile');
+             const widget = document.querySelector('.goog-te-gadget');
+             
+             if (!widget) {
+               console.log('⚠️ Widget not found for moving');
+               return;
+             }
+             
+             if (window.innerWidth <= 1024) {
+               // Mobile: move widget to mobile container
+               if (mobileContainer && widget.parentElement !== mobileContainer) {
+                 console.log('📱 Moving widget to mobile container');
+                 mobileContainer.appendChild(widget);
+               }
+             } else {
+               // Desktop: move widget to desktop container
+               if (desktopContainer && widget.parentElement !== desktopContainer) {
+                 console.log('🖥️ Moving widget to desktop container');
+                 desktopContainer.appendChild(widget);
+               }
+             }
+           }
+           
+           // Initial positioning
+           setTimeout(moveWidget, 1000);
+           
+           // Listen for resize events
+           window.addEventListener('resize', moveWidget);
+           
+           // Listen for mobile menu open/close
+           const observer = new MutationObserver(() => {
+             setTimeout(moveWidget, 100);
+           });
+           
+           observer.observe(document.body, {
+             childList: true,
+             subtree: true
+           });
+         }
+         
+         function retryInitialization() {
+           if (initializationRetries < maxRetries) {
+             initializationRetries++;
+             console.log(`🔄 Retrying Google Translate initialization (${initializationRetries}/${maxRetries})...`);
+             setTimeout(() => {
+               googleTranslateElementInit();
+             }, 1000 * initializationRetries);
+           } else {
+             console.error('❌ Max retries reached for Google Translate initialization');
+           }
+         }
+      
+      // Add window load event listener as backup
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          if (!desktopWidgetInitialized && window.google && window.google.translate) {
+            console.log('🔄 Backup initialization triggered on window load');
+            initializeDesktopWidget();
+          }
+        }, 2000);
+      });
+      
+      // Add DOM ready event listener as another backup
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          if (!desktopWidgetInitialized && window.google && window.google.translate) {
+            console.log('🔄 Backup initialization triggered on DOM ready');
+            initializeDesktopWidget();
+          }
+        }, 1000);
+      });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <title>WYENFOS PVT-LTD - Professional Web Solutions</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

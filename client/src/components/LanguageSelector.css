@@ -1,0 +1,35 @@
+/* Simple Google Translate Widget Styling */
+#google_translate_element {
+  display: inline-block;
+}
+
+/* Hide Google Translate banner */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Style the Google Translate widget */
+.goog-te-gadget {
+  font-family: Arial, sans-serif !important;
+  font-size: 12px !important;
+}
+
+.goog-te-gadget-simple {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.goog-te-gadget-simple a {
+  color: #333 !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+}
+
+.goog-te-gadget-simple a:hover {
+  color: #007bff !important;
+}

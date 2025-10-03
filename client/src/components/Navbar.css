@@ -1,0 +1,209 @@
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.navbar-brand h1 {
+  color: #007bff;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 40px; /* Move navbar buttons to the right */
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  color: #007bff;
+}
+
+/* Language Selector in Navbar */
+.navbar-language-selector {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.navbar-language-selector .language-selector {
+  position: relative;
+  z-index: 1002;
+}
+
+.navbar-language-selector .language-selector #google_translate_element {
+  display: inline-block;
+}
+
+/* Style Google Translate widget to match navbar items */
+.navbar-language-selector .goog-te-gadget-simple {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  letter-spacing: 0.3px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  min-width: 80px !important;
+  max-width: 120px !important;
+  width: 120px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.navbar-language-selector .goog-te-gadget-simple:hover {
+  background: #f8f9fa !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  border-color: #d0d0d0 !important;
+  color: #007bff !important;
+}
+
+.navbar-language-selector .goog-te-gadget-simple .goog-te-menu-value {
+  color: #333333 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  letter-spacing: 0.3px !important;
+  text-shadow: none !important;
+}
+
+.navbar-language-selector .goog-te-gadget-simple .goog-te-menu-value:after {
+  content: "▼" !important;
+  font-size: 10px !important;
+  margin-left: 4px !important;
+  color: #666666 !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn-login {
+  background: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.btn-login:hover {
+  background: #007bff;
+  color: white;
+}
+
+.btn-signup {
+  background: #007bff;
+  color: white;
+}
+
+.btn-logout {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-logout:hover {
+  background: #c82333;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-menu.active {
+    left: 0;
+  }
+  
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .auth-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-language-selector .goog-te-gadget-simple {
+    padding: 6px 10px !important;
+    min-width: 70px !important;
+    max-width: 90px !important;
+    width: 90px !important;
+    font-size: 12px !important;
+  }
+  
+  .navbar-language-selector .goog-te-gadget-simple .goog-te-menu-value {
+    font-size: 12px !important;
+  }
+}
