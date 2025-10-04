@@ -113,3 +113,6 @@ Thumbs.db
 
 # Build artifacts
 build.zip
+
+# Server folder (separate repository)
+server/
